@@ -1,0 +1,448 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PAYROLL_PreProdModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Db_Entities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="pa_selDatosLiquidacion">
+      <Parameter Name="USU_ID" Mode="In" Type="String" />
+      <Parameter Name="NOM_CLIENTE_DB" Mode="In" Type="String" />
+      <Parameter Name="Mes_consul" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="Causal" EntityType="PAYROLL_PreProdModel.Causal" />
+    <EntitySet Name="Cliente" EntityType="PAYROLL_PreProdModel.Cliente" />
+    <EntitySet Name="Comentario" EntityType="PAYROLL_PreProdModel.Comentario" />
+    <EntitySet Name="Documento" EntityType="PAYROLL_PreProdModel.Documento" />
+    <EntitySet Name="Ingresos" EntityType="PAYROLL_PreProdModel.Ingresos" />
+    <EntitySet Name="parametros" EntityType="PAYROLL_PreProdModel.parametros" />
+    <EntitySet Name="Remuneracion" EntityType="PAYROLL_PreProdModel.Remuneracion" />
+    <EntitySet Name="sysdiagrams" EntityType="PAYROLL_PreProdModel.sysdiagrams" />
+    <EntitySet Name="tipo_usu" EntityType="PAYROLL_PreProdModel.tipo_usu" />
+    <EntitySet Name="Usuario" EntityType="PAYROLL_PreProdModel.Usuario" />
+    <EntitySet Name="ConfigPDF" EntityType="PAYROLL_PreProdModel.ConfigPDF" />
+    <EntitySet Name="Permisos" EntityType="PAYROLL_PreProdModel.Permisos" />
+    <EntitySet Name="Relacion_Usuarios" EntityType="PAYROLL_PreProdModel.Relacion_Usuarios" />
+    <EntitySet Name="Usuario_Cliente" EntityType="PAYROLL_PreProdModel.Usuario_Cliente" />
+    <AssociationSet Name="FK_Causal_Ingresos1" Association="PAYROLL_PreProdModel.FK_Causal_Ingresos1">
+      <End Role="Ingresos" EntitySet="Ingresos" />
+      <End Role="Causal" EntitySet="Causal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_Cliente" Association="PAYROLL_PreProdModel.FK_Usuario_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comentario_Documento" Association="PAYROLL_PreProdModel.FK_Comentario_Documento">
+      <End Role="Documento" EntitySet="Documento" />
+      <End Role="Comentario" EntitySet="Comentario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comentario_Usuario" Association="PAYROLL_PreProdModel.FK_Comentario_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Comentario" EntitySet="Comentario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Documento_Ingresos1" Association="PAYROLL_PreProdModel.FK_Documento_Ingresos1">
+      <End Role="Ingresos" EntitySet="Ingresos" />
+      <End Role="Documento" EntitySet="Documento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Documento_Remuneracion" Association="PAYROLL_PreProdModel.FK_Documento_Remuneracion">
+      <End Role="Remuneracion" EntitySet="Remuneracion" />
+      <End Role="Documento" EntitySet="Documento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Remuneracion_Usuario" Association="PAYROLL_PreProdModel.FK_Remuneracion_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Remuneracion" EntitySet="Remuneracion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_tipo_usu" Association="PAYROLL_PreProdModel.FK_Usuario_tipo_usu">
+      <End Role="tipo_usu" EntitySet="tipo_usu" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Permisos_Usuario" Association="PAYROLL_PreProdModel.FK_Permisos_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Permisos" EntitySet="Permisos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_Cliente_Usuario" Association="PAYROLL_PreProdModel.FK_Usuario_Cliente_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Usuario_Cliente" EntitySet="Usuario_Cliente" />
+    </AssociationSet>
+    <FunctionImport Name="fn_subordinadosPorUsuario" IsComposable="true" ReturnType="Collection(PAYROLL_PreProdModel.fn_subordinadosPorUsuario_Result)">
+      <Parameter Name="Usuario" Mode="In" Type="String" />
+      <Parameter Name="Nivel" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="pa_selDatosCertAntiguedad">
+      <Parameter Name="USU_ID" Mode="In" Type="String" />
+      <Parameter Name="NOM_CLIENTE_DB" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(PAYROLL_PreProdModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(PAYROLL_PreProdModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_selPeriodoUsuario">
+      <Parameter Name="Fecha" Mode="In" Type="DateTime" />
+      <Parameter Name="NOM_CLIENTE_DB" Mode="In" Type="String" />
+      <Parameter Name="VALOR_RET" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <!--<AssociationSet Name="FK_Comentario_Documento" Association="PAYROLL_PreProdModel.FK_Comentario_Documento">
+            <End Role="Documento" EntitySet="Documento" />
+            <End Role="Comentario" EntitySet="Comentario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Comentario_Usuario" Association="PAYROLL_PreProdModel.FK_Comentario_Usuario">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Comentario" EntitySet="Comentario" />
+          </AssociationSet>-->
+  </EntityContainer>
+  <EntityType Name="Causal">
+    <Key>
+      <PropertyRef Name="id_causa" />
+    </Key>
+    <Property Name="id_causa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nom_causa" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="descripcion" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="id_ing" Type="Int32" />
+    <NavigationProperty Name="Ingresos" Relationship="PAYROLL_PreProdModel.FK_Causal_Ingresos1" FromRole="Causal" ToRole="Ingresos" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="id_cliente" />
+    </Key>
+    <Property Name="id_cliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nom_emp" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="giro" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="RUT" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Nom_cor_emp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Usuario" Relationship="PAYROLL_PreProdModel.FK_Usuario_Cliente" FromRole="Cliente" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Comentario">
+    <Key>
+      <PropertyRef Name="id_com" />
+    </Key>
+    <Property Name="id_com" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="titulo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="contenido" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="id_usu" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_doc" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Documento" Relationship="PAYROLL_PreProdModel.FK_Comentario_Documento" FromRole="Comentario" ToRole="Documento" />
+    <NavigationProperty Name="Usuario" Relationship="PAYROLL_PreProdModel.FK_Comentario_Usuario" FromRole="Comentario" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Documento">
+    <Key>
+      <PropertyRef Name="id_doc" />
+    </Key>
+    <Property Name="id_doc" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="url" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id_ing" Type="Int32" />
+    <Property Name="id_rem" Type="Int32" />
+    <NavigationProperty Name="Comentario" Relationship="PAYROLL_PreProdModel.FK_Comentario_Documento" FromRole="Documento" ToRole="Comentario" />
+    <NavigationProperty Name="Ingresos" Relationship="PAYROLL_PreProdModel.FK_Documento_Ingresos1" FromRole="Documento" ToRole="Ingresos" />
+    <NavigationProperty Name="Remuneracion" Relationship="PAYROLL_PreProdModel.FK_Documento_Remuneracion" FromRole="Documento" ToRole="Remuneracion" />
+  </EntityType>
+  <EntityType Name="Ingresos">
+    <Key>
+      <PropertyRef Name="id_ing" />
+    </Key>
+    <Property Name="id_ing" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombres" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="apellido" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="rut" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="nacionalidad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_nacimiento" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="direccion" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="estado_civil" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="mail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id_usu" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id_causa" Type="Int32" />
+    <NavigationProperty Name="Causal" Relationship="PAYROLL_PreProdModel.FK_Causal_Ingresos1" FromRole="Ingresos" ToRole="Causal" />
+    <NavigationProperty Name="Documento" Relationship="PAYROLL_PreProdModel.FK_Documento_Ingresos1" FromRole="Ingresos" ToRole="Documento" />
+  </EntityType>
+  <EntityType Name="parametros">
+    <Key>
+      <PropertyRef Name="valor" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="grupo" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="detalle" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="valor" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="texto" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="orden" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Remuneracion">
+    <Key>
+      <PropertyRef Name="id_rem" />
+    </Key>
+    <Property Name="id_rem" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sueldo_base" Type="Int32" Nullable="false" />
+    <Property Name="gratificacion" Type="Int32" />
+    <Property Name="otros_haberes" Type="Int32" />
+    <Property Name="seg_com" Type="Int32" Nullable="false" />
+    <Property Name="apv" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="isapre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="anticipo" Type="Int32" />
+    <Property Name="asignacion" Type="Int32" />
+    <Property Name="id_usu" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Documento" Relationship="PAYROLL_PreProdModel.FK_Documento_Remuneracion" FromRole="Remuneracion" ToRole="Documento" />
+    <NavigationProperty Name="Usuario" Relationship="PAYROLL_PreProdModel.FK_Remuneracion_Usuario" FromRole="Remuneracion" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tipo_usu">
+    <Key>
+      <PropertyRef Name="id_tipo_usu" />
+    </Key>
+    <Property Name="id_tipo_usu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Usuario" Relationship="PAYROLL_PreProdModel.FK_Usuario_tipo_usu" FromRole="tipo_usu" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="id_usu" />
+    </Key>
+    <Property Name="id_usu" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Nom_usu" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="pass_usu" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id_cliente" Type="Int32" Nullable="false" />
+    <Property Name="id_tipo_usu" Type="Int32" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fechaIngreso" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Cliente" Relationship="PAYROLL_PreProdModel.FK_Usuario_Cliente" FromRole="Usuario" ToRole="Cliente" />
+    <NavigationProperty Name="Comentario" Relationship="PAYROLL_PreProdModel.FK_Comentario_Usuario" FromRole="Usuario" ToRole="Comentario" />
+    <NavigationProperty Name="Remuneracion" Relationship="PAYROLL_PreProdModel.FK_Remuneracion_Usuario" FromRole="Usuario" ToRole="Remuneracion" />
+    <NavigationProperty Name="tipo_usu" Relationship="PAYROLL_PreProdModel.FK_Usuario_tipo_usu" FromRole="Usuario" ToRole="tipo_usu" />
+    <NavigationProperty Name="Permisos" Relationship="PAYROLL_PreProdModel.FK_Permisos_Usuario" FromRole="Usuario" ToRole="Permisos" />
+    <NavigationProperty Name="Usuario_Cliente" Relationship="PAYROLL_PreProdModel.FK_Usuario_Cliente_Usuario" FromRole="Usuario" ToRole="Usuario_Cliente" />
+  </EntityType>
+  <EntityType Name="ConfigPDF">
+    <Key>
+      <PropertyRef Name="tag" />
+      <PropertyRef Name="campo" />
+      <PropertyRef Name="id_cliente" />
+    </Key>
+    <Property Name="tag" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="campo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id_cliente" Type="Int32" Nullable="false" />
+    <Property Name="label" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="orden" Type="Int32" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Permisos">
+    <Key>
+      <PropertyRef Name="id_usu" />
+      <PropertyRef Name="id_parametro" />
+    </Key>
+    <Property Name="id_usu" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id_parametro" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Usuario" Relationship="PAYROLL_PreProdModel.FK_Permisos_Usuario" FromRole="Permisos" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Relacion_Usuarios">
+    <Key>
+      <PropertyRef Name="superior" />
+      <PropertyRef Name="subordinado" />
+    </Key>
+    <Property Name="superior" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="subordinado" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Usuario_Cliente">
+    <Key>
+      <PropertyRef Name="id_usu" />
+      <PropertyRef Name="id_cliente" />
+    </Key>
+    <Property Name="id_usu" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id_cliente" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Usuario" Relationship="PAYROLL_PreProdModel.FK_Usuario_Cliente_Usuario" FromRole="Usuario_Cliente" ToRole="Usuario" />
+  </EntityType>
+  <Association Name="FK_Causal_Ingresos1">
+    <End Type="PAYROLL_PreProdModel.Ingresos" Role="Ingresos" Multiplicity="0..1" />
+    <End Type="PAYROLL_PreProdModel.Causal" Role="Causal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ingresos">
+        <PropertyRef Name="id_ing" />
+      </Principal>
+      <Dependent Role="Causal">
+        <PropertyRef Name="id_ing" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_Cliente">
+    <End Type="PAYROLL_PreProdModel.Cliente" Role="Cliente" Multiplicity="1" />
+    <End Type="PAYROLL_PreProdModel.Usuario" Role="Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="id_cliente" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="id_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comentario_Documento">
+    <End Type="PAYROLL_PreProdModel.Documento" Role="Documento" Multiplicity="1" />
+    <End Type="PAYROLL_PreProdModel.Comentario" Role="Comentario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Documento">
+        <PropertyRef Name="id_doc" />
+      </Principal>
+      <Dependent Role="Comentario">
+        <PropertyRef Name="id_doc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comentario_Usuario">
+    <End Type="PAYROLL_PreProdModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="PAYROLL_PreProdModel.Comentario" Role="Comentario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="id_usu" />
+      </Principal>
+      <Dependent Role="Comentario">
+        <PropertyRef Name="id_usu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Documento_Ingresos1">
+    <End Type="PAYROLL_PreProdModel.Ingresos" Role="Ingresos" Multiplicity="0..1" />
+    <End Type="PAYROLL_PreProdModel.Documento" Role="Documento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ingresos">
+        <PropertyRef Name="id_ing" />
+      </Principal>
+      <Dependent Role="Documento">
+        <PropertyRef Name="id_ing" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Documento_Remuneracion">
+    <End Type="PAYROLL_PreProdModel.Remuneracion" Role="Remuneracion" Multiplicity="0..1" />
+    <End Type="PAYROLL_PreProdModel.Documento" Role="Documento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Remuneracion">
+        <PropertyRef Name="id_rem" />
+      </Principal>
+      <Dependent Role="Documento">
+        <PropertyRef Name="id_rem" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Remuneracion_Usuario">
+    <End Type="PAYROLL_PreProdModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="PAYROLL_PreProdModel.Remuneracion" Role="Remuneracion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="id_usu" />
+      </Principal>
+      <Dependent Role="Remuneracion">
+        <PropertyRef Name="id_usu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_tipo_usu">
+    <End Type="PAYROLL_PreProdModel.tipo_usu" Role="tipo_usu" Multiplicity="1" />
+    <End Type="PAYROLL_PreProdModel.Usuario" Role="Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tipo_usu">
+        <PropertyRef Name="id_tipo_usu" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="id_tipo_usu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Permisos_Usuario">
+    <End Type="PAYROLL_PreProdModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="PAYROLL_PreProdModel.Permisos" Role="Permisos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="id_usu" />
+      </Principal>
+      <Dependent Role="Permisos">
+        <PropertyRef Name="id_usu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_Cliente_Usuario">
+    <End Type="PAYROLL_PreProdModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="PAYROLL_PreProdModel.Usuario_Cliente" Role="Usuario_Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="id_usu" />
+      </Principal>
+      <Dependent Role="Usuario_Cliente">
+        <PropertyRef Name="id_usu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="fn_subordinadosPorUsuario_Result">
+    <Property Type="Int32" Name="NIVEL" Nullable="true" />
+    <Property Type="String" Name="id_usu" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Nom_usu" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="pass_usu" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="id_cliente" Nullable="false" />
+    <Property Type="Int32" Name="id_tipo_usu" Nullable="false" />
+    <Property Type="String" Name="email" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="fechaIngreso" Nullable="false" Precision="16" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <!--<Association Name="FK_Comentario_Documento">
+          <End Type="PAYROLL_PreProdModel.Documento" Role="Documento" Multiplicity="1" />
+          <End Type="PAYROLL_PreProdModel.Comentario" Role="Comentario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Documento">
+              <PropertyRef Name="id_doc" />
+            </Principal>
+            <Dependent Role="Comentario">
+              <PropertyRef Name="id_doc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Comentario_Usuario">
+          <End Type="PAYROLL_PreProdModel.Usuario" Role="Usuario" Multiplicity="1" />
+          <End Type="PAYROLL_PreProdModel.Comentario" Role="Comentario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="id_usu" />
+            </Principal>
+            <Dependent Role="Comentario">
+              <PropertyRef Name="id_usu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>-->
+</Schema>

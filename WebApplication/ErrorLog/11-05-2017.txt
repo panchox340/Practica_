@@ -1,0 +1,93 @@
+Time: 11-05-2017 12:53:18
+-----------------------------------------------------------
+Code: Yz63wgzZ05CAvomrezPI_11052017125318
+Message: No se puede convertir un objeto de tipo 'System.Data.Entity.DynamicProxies.Cliente_F80CE238BDE9DBBEA3C2C8C5D3F0DB5B97C0AA99F2B8C25E5DE3F3A4ED352A2C' al tipo 'WebApplicationModel.Usuario'.
+StackTrace:    en WebApplication.CustomLayoutAjaxAttribute.OnResultExecuting(ResultExecutingContext filterContext) en C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\App_Start\FilterConfig.cs:línea 29
+Source: WebApplication
+TargetSite: Void OnResultExecuting(System.Web.Mvc.ResultExecutingContext)
+-----------------------------------------------------------
+
+Time: 11-05-2017 12:53:30
+-----------------------------------------------------------
+Code: UrHYGfuuVuINNt8ouzIP_11052017125330
+Message: No se puede convertir un objeto de tipo 'System.Data.Entity.DynamicProxies.Cliente_F80CE238BDE9DBBEA3C2C8C5D3F0DB5B97C0AA99F2B8C25E5DE3F3A4ED352A2C' al tipo 'WebApplicationModel.Usuario'.
+StackTrace:    en WebApplication.CustomLayoutAjaxAttribute.OnResultExecuting(ResultExecutingContext filterContext) en C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\App_Start\FilterConfig.cs:línea 29
+Source: WebApplication
+TargetSite: Void OnResultExecuting(System.Web.Mvc.ResultExecutingContext)
+-----------------------------------------------------------
+
+Time: 11-05-2017 14:50:50
+-----------------------------------------------------------
+Code: cpgRxwbr03wW1a9T57x1_11052017145050
+Message: El índice estaba fuera del intervalo. Debe ser un valor no negativo e inferior al tamaño de la colección.
+Nombre del parámetro: index
+StackTrace:    en System.Collections.ArrayList.get_Item(Int32 index)
+   en System.Web.SessionState.SessionStateItemCollection.get_Item(Int32 index)
+   en System.Web.SessionState.HttpSessionStateContainer.get_Item(Int32 index)
+   en System.Web.HttpSessionStateWrapper.get_Item(Int32 index)
+   en WebApplication.CustomLayoutAjaxAttribute.OnResultExecuting(ResultExecutingContext filterContext) en C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\App_Start\FilterConfig.cs:línea 30
+Source: mscorlib
+TargetSite: System.Object get_Item(Int32)
+-----------------------------------------------------------
+
+Time: 11-05-2017 14:55:51
+-----------------------------------------------------------
+Code: q2T5XAnVFEAVf5tcCELp_11052017145551
+Message: El índice estaba fuera del intervalo. Debe ser un valor no negativo e inferior al tamaño de la colección.
+Nombre del parámetro: index
+StackTrace:    en System.Collections.ArrayList.get_Item(Int32 index)
+   en System.Web.SessionState.SessionStateItemCollection.get_Item(Int32 index)
+   en System.Web.SessionState.HttpSessionStateContainer.get_Item(Int32 index)
+   en System.Web.HttpSessionStateWrapper.get_Item(Int32 index)
+   en WebApplication.CustomLayoutAjaxAttribute.OnResultExecuting(ResultExecutingContext filterContext) en C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\App_Start\FilterConfig.cs:línea 30
+Source: mscorlib
+TargetSite: System.Object get_Item(Int32)
+-----------------------------------------------------------
+
+Time: 11-05-2017 15:10:28
+-----------------------------------------------------------
+Code: aIeIlQIEqAO34es5et5z_11052017151028
+Message: El índice estaba fuera del intervalo. Debe ser un valor no negativo e inferior al tamaño de la colección.
+Nombre del parámetro: index
+StackTrace:    en System.Collections.ArrayList.get_Item(Int32 index)
+   en System.Web.SessionState.SessionStateItemCollection.get_Item(Int32 index)
+   en System.Web.SessionState.HttpSessionStateContainer.get_Item(Int32 index)
+   en System.Web.HttpSessionStateWrapper.get_Item(Int32 index)
+   en WebApplication.CustomLayoutAjaxAttribute.OnResultExecuting(ResultExecutingContext filterContext) en C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\App_Start\FilterConfig.cs:línea 27
+Source: mscorlib
+TargetSite: System.Object get_Item(Int32)
+-----------------------------------------------------------
+
+Time: 11-05-2017 15:10:58
+-----------------------------------------------------------
+Code: 5Z8PIqw0zdRWU4UuzU5Z_11052017151058
+Message: Referencia a objeto no establecida como instancia de un objeto.
+StackTrace:    en WebApplication.CustomLayoutAjaxAttribute.OnResultExecuting(ResultExecutingContext filterContext) en C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\App_Start\FilterConfig.cs:línea 45
+   en System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   en System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   en System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   en System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   en System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   en System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   en System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   en System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   en System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   en System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   en System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   en System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   en System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   en System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+Source: WebApplication
+TargetSite: Void OnResultExecuting(System.Web.Mvc.ResultExecutingContext)
+-----------------------------------------------------------
+

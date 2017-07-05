@@ -1,0 +1,106 @@
+﻿@model WebApplicationModel.Remuneracion
+@using WebApplication.Extensions
+
+
+@using (Html.BeginForm((Model == null ? "Create" : "Edit"), "LibroRemu", FormMethod.Post, new { @id = "mant-form", @novalidate = "novalidate", role = "form" }))
+{
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Formulario Solicitud Vacaciones</h4>
+    </div>
+
+    @Html.AntiForgeryToken()
+    @(Model == null ? new MvcHtmlString("") : Html.HiddenFor(p => p.id_rem))
+    @Html.Hidden("id_emp", (int)ViewBag.id_emp)
+    
+    <div class="modal-body">
+        <div class="box-body">
+            <ul id="myTab1" class="nav nav-tabs bordered cabecera_tab modal-body box-body">
+                <li class="active"><a href="#s1" data-toggle="tab" aria-expanded="false" id="cabecera_tab1">Ingreso Libro de Remuneraciones </a></li>
+                <li class=""><a href="#s2" data-toggle="tab" aria-expanded="true" id="cabecera_tab2">Documentos</a></li>
+            </ul>
+
+            <div id="myTabContent1" class="tab-content formcolor">
+                <div class="tab-pane fade active in form-group" id="s1">
+                    <div class="col-md-6">
+                        <div class="box box-info">
+                            <div class="box-header">
+                                <h3 class="box-title">Datos del Libro de Remuneraciones</h3>
+                            </div>
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <label>Fecha Libro:</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-user"></i>
+                                        </div>
+                                        @Html.TextBoxFor(model => model.Novedad.fecha_novedad, new {type = "text", @class = "form-control" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Descripción solicitud</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-file-text"></i>
+                                        </div>
+                                        @Html.TextAreaFor(model => model.comentario, new { @type = "text", @class = "form-control pull-right", maxlength = 200, style = "width: 200px; height: 100px;" })
+                                        @*<input type="text" class="form-control pull-right">*@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade  in form-group" id="s2">
+                    <div class="col-md-6">
+                        <div class="box box-info">
+                            <div class="box-header">
+                                <h3 class="box-title">Documento</h3>
+                            </div>
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <label>Documento Libro:</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <input name="documento" type="file" class="form-control" id="documento">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box-footer">
+            <button type="button" class="btn btn-primary" action="save">Solicitar</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+}
+<script>
+    // levanta el formulario
+    setFormulario(
+        "mant-form",
+        {
+            fecha_novedad: { required: true },
+            comentario: { required: true }
+        },
+        {
+            fecha_novedad: { required: '<span class="help-block error" ><i class="fa fa-warning"></i> Ingrese Nombre válido</span> ' },
+            comentario: { required: '<span class="help-block error" ><i class="fa fa-warning"></i> Ingrese rut válido</span> ' }
+        }
+    );
+
+    $('#rut').mask('00.000.000-0', { reverse: true });
+
+    //inicializacion calendario
+    //$('#reservation').daterangepicker({
+    //    "minDate": fecha_hoy
+    //})
+
+
+
+</script>

@@ -1,0 +1,85 @@
+﻿@model WebApplicationModel.Otra_solicitud
+@using WebApplication.App_GlobalResources
+@using WebApplication.Extensions
+
+<style>
+      label.error {color: red;}
+      .error {color: #f0ad4e;}
+      .formcolor {background-color:#f5f5f5;}
+    .fuente {
+        color:white;
+    }
+</style>
+<form class="" id="form-otrasSolicitudes" method="post" action="@Url.Action("Create", "SolGenerica", new { Area = "Solicitudes" })">
+    @Html.AntiForgeryToken()
+    <div class="box-header with-border" style="background-color:#ccc;">
+        <h3 class="box-title fuente">@Pay_Lenguaje.Otras_solicitudes</h3>
+        <span></span><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+            <!-- text input -->
+
+
+        <div class="input-group">
+            <span class="input-group-addon" id="">Tipo</span>
+            @{ @Html.DropDownList("Tipo_novedad", (SelectList)ViewBag.Tipo_novedad, "Seleccione...", new { @onchange = "OcultarMonto()", @class = "form-control" });
+                <div style="display:none">
+                    @Html.DropDownList("Tipo_novedad2", (SelectList)ViewBag.Tipo_novedadOculto, "Seleccione...", new { @class = "form-control" });
+                </div>
+            }
+        </div>
+        <br />
+        <div class="input-group">
+            <span class="input-group-addon" id="">Usuario</span>
+            @{ @Html.DropDownListFor(model => model.id_usu, (List<SelectListItem>)ViewBag.usuarios, "Seleccione...", new { @id = "id_usu", @class = "form-control" });
+            }
+        </div>
+
+            <!-- textarea -->
+        <br />
+            <div class="form-group">
+                @*<label>Descripción</label>*@
+                <textarea class="form-control" id="txtDescripcion" name="descripcion" rows="3" placeholder="Ingrese detalle de la solicitud ..."></textarea>
+            </div>
+
+        <div class="input-group" id="div_monto">
+            <span class="input-group-addon" id="div_monto">Monto</span>
+            @Html.TextBox("monto", "This is value", new { @id = "txtMonto", @class = "form-control" })
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">@Pay_Lenguaje.cerrar</button>
+            <button type="button" action="save" class="btn btn-default">@Pay_Lenguaje.guardar_cambios</button>
+        </div>
+    </div>
+    <!-- /.box-body -->
+</form>
+<script>
+    setFormulario(
+           "form-otrasSolicitudes",
+        {
+            parametros: { required: true },
+            id_usu: { required: true },
+            txtDescripcion: { required: true },
+            txtMonto: { required: false }
+        },
+        {
+            parametros: { required: '<span class="help-block error" ><i class="fa fa-warning"></i> Seleccione tipo solicitud</span> ' },
+            id_usu: { required: '<span class="help-block error"><i class="fa fa-warning"></i> Seleccione usuario </span> ' },
+            txtDescripcion: { required: '<span class="help-block error"><i class="fa fa-warning"></i> Ingrese Descripción</span> ' },
+            txtMonto: { required: '<span class="help-block error"><i class="fa fa-warning"></i> Ingrese Monto </span> ' }
+
+        });
+    $('#txtMonto').mask("000000000000000");
+
+    function OcultarMonto() {
+        document.getElementById("Tipo_novedad2").selectedIndex = document.getElementById("Tipo_novedad").selectedIndex;
+        //document.getElementById("txtMonto").style.display = "none";
+        if (document.getElementById("Tipo_novedad2").value == "True")
+        {
+            document.getElementById("div_monto").style.display = "block"
+        } else {
+            document.getElementById("div_monto").style.display = "none"
+        }
+    }
+</script>

@@ -1,0 +1,310 @@
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\roslyn\csc.exe
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\roslyn\vbc.exe
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\roslyn\VBCSCompiler.exe
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\WebApplication.dll.config
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\WebApplication.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\WebApplication.pdb
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\Antlr3.Runtime.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\EntityFramework.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\EntityFramework.SqlServer.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\Microsoft.Owin.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\Microsoft.Owin.Security.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\Newtonsoft.Json.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\Owin.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\System.Web.Helpers.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\System.Web.Mvc.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\System.Web.Optimization.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\System.Web.Razor.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\System.Web.WebPages.Deployment.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\System.Web.WebPages.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\System.Web.WebPages.Razor.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\WebGrease.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\System.Web.Helpers.xml
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\System.Web.Mvc.xml
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\System.Web.Optimization.xml
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\System.Web.Razor.xml
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\System.Web.WebPages.xml
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\System.Web.WebPages.Deployment.xml
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\System.Web.WebPages.Razor.xml
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\Antlr3.Runtime.pdb
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\Newtonsoft.Json.xml
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\EntityFramework.xml
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\EntityFramework.SqlServer.xml
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\Microsoft.Owin.xml
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\Microsoft.Owin.Security.xml
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\obj\Debug\WebApplication.csprojResolveAssemblyReference.cache
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\obj\Debug\WebApplication.dll
+C:\Users\EstebanIbañez\Downloads\C#\WebApplication\obj\Debug\WebApplication.pdb
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\roslyn\csc.exe
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\roslyn\Microsoft.CSharp.Core.targets
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\roslyn\Microsoft.VisualBasic.Core.targets
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\roslyn\System.Collections.Immutable.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\roslyn\System.Reflection.Metadata.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\roslyn\vbc.exe
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\roslyn\VBCSCompiler.exe
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\roslyn\VBCSCompiler.exe.config
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\WebApplication.dll.config
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\WebApplication.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\WebApplication.pdb
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\Antlr3.Runtime.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\EntityFramework.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\EntityFramework.SqlServer.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\Microsoft.AspNet.Identity.Core.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\Microsoft.AspNet.Identity.Owin.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\Microsoft.Owin.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\Microsoft.Owin.Host.SystemWeb.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\Microsoft.Owin.Security.Cookies.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\Microsoft.Owin.Security.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\Microsoft.Owin.Security.Facebook.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\Microsoft.Owin.Security.Google.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\Microsoft.Owin.Security.OAuth.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\Microsoft.Owin.Security.Twitter.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\Microsoft.Web.Infrastructure.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\Newtonsoft.Json.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\Owin.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\System.Web.Helpers.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\System.Web.Mvc.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\System.Web.Optimization.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\System.Web.Razor.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\System.Web.WebPages.Deployment.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\System.Web.WebPages.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\System.Web.WebPages.Razor.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\WebGrease.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\System.Web.Helpers.xml
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\System.Web.Mvc.xml
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\System.Web.Optimization.xml
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\System.Web.Razor.xml
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\System.Web.WebPages.xml
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\System.Web.WebPages.Deployment.xml
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\System.Web.WebPages.Razor.xml
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\Antlr3.Runtime.pdb
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\Newtonsoft.Json.xml
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\EntityFramework.xml
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\EntityFramework.SqlServer.xml
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\Microsoft.AspNet.Identity.Core.xml
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\Microsoft.AspNet.Identity.Owin.xml
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\Microsoft.Owin.xml
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\Microsoft.Owin.Host.SystemWeb.xml
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\Microsoft.Owin.Security.xml
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\Microsoft.Owin.Security.Facebook.xml
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\Microsoft.Owin.Security.Cookies.xml
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\Microsoft.Owin.Security.OAuth.xml
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\Microsoft.Owin.Security.Google.xml
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\Microsoft.Owin.Security.Twitter.xml
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\obj\Debug\WebApplication.csprojResolveAssemblyReference.cache
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\obj\Debug\WebApplication.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplication\obj\Debug\WebApplication.pdb
+C:\Repos\C#\WebApplication\bin\roslyn\csc.exe
+C:\Repos\C#\WebApplication\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Repos\C#\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Repos\C#\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Repos\C#\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Repos\C#\WebApplication\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Repos\C#\WebApplication\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Repos\C#\WebApplication\bin\roslyn\System.Collections.Immutable.dll
+C:\Repos\C#\WebApplication\bin\roslyn\System.Reflection.Metadata.dll
+C:\Repos\C#\WebApplication\bin\roslyn\vbc.exe
+C:\Repos\C#\WebApplication\bin\roslyn\VBCSCompiler.exe
+C:\Repos\C#\WebApplication\bin\roslyn\VBCSCompiler.exe.config
+C:\Repos\C#\WebApplication\bin\WebApplication.dll.config
+C:\Repos\C#\WebApplication\bin\WebApplication.dll
+C:\Repos\C#\WebApplication\bin\WebApplication.pdb
+C:\Repos\C#\WebApplication\bin\Antlr3.Runtime.dll
+C:\Repos\C#\WebApplication\bin\EntityFramework.dll
+C:\Repos\C#\WebApplication\bin\EntityFramework.SqlServer.dll
+C:\Repos\C#\WebApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Repos\C#\WebApplication\bin\Microsoft.Web.Infrastructure.dll
+C:\Repos\C#\WebApplication\bin\Newtonsoft.Json.dll
+C:\Repos\C#\WebApplication\bin\System.Web.Helpers.dll
+C:\Repos\C#\WebApplication\bin\System.Web.Mvc.dll
+C:\Repos\C#\WebApplication\bin\System.Web.Optimization.dll
+C:\Repos\C#\WebApplication\bin\System.Web.Razor.dll
+C:\Repos\C#\WebApplication\bin\System.Web.WebPages.Deployment.dll
+C:\Repos\C#\WebApplication\bin\System.Web.WebPages.dll
+C:\Repos\C#\WebApplication\bin\System.Web.WebPages.Razor.dll
+C:\Repos\C#\WebApplication\bin\WebApplicationModel.dll
+C:\Repos\C#\WebApplication\bin\WebGrease.dll
+C:\Repos\C#\WebApplication\bin\WebApplicationModel.pdb
+C:\Repos\C#\WebApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Repos\C#\WebApplication\bin\System.Web.Helpers.xml
+C:\Repos\C#\WebApplication\bin\System.Web.Mvc.xml
+C:\Repos\C#\WebApplication\bin\System.Web.Optimization.xml
+C:\Repos\C#\WebApplication\bin\System.Web.Razor.xml
+C:\Repos\C#\WebApplication\bin\System.Web.WebPages.xml
+C:\Repos\C#\WebApplication\bin\System.Web.WebPages.Deployment.xml
+C:\Repos\C#\WebApplication\bin\System.Web.WebPages.Razor.xml
+C:\Repos\C#\WebApplication\bin\Antlr3.Runtime.pdb
+C:\Repos\C#\WebApplication\bin\Newtonsoft.Json.xml
+C:\Repos\C#\WebApplication\bin\EntityFramework.xml
+C:\Repos\C#\WebApplication\bin\EntityFramework.SqlServer.xml
+C:\Repos\C#\WebApplication\obj\Debug\WebApplication.csprojResolveAssemblyReference.cache
+C:\Repos\C#\WebApplication\obj\Debug\WebApplication.dll
+C:\Repos\C#\WebApplication\obj\Debug\WebApplication.pdb
+C:\Repos\C#\WebApplication\bin\itextsharp.dll
+C:\Repos\C#\WebApplication\bin\itextsharp.xml
+C:\Repos\C#\WebApplication\bin\Circon.Common.dll
+C:\Repos\C#\WebApplication\bin\Circon.Mvc.Helpers.dll
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\csc.exe
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\System.Collections.Immutable.dll
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\System.Reflection.Metadata.dll
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\vbc.exe
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\VBCSCompiler.exe
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\VBCSCompiler.exe.config
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\WebApplication.dll.config
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\WebApplication.dll
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\WebApplication.pdb
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\Antlr3.Runtime.dll
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\Circon.Common.dll
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\Circon.Mvc.Helpers.dll
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\EntityFramework.dll
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\EntityFramework.SqlServer.dll
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\itextsharp.dll
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\Microsoft.Web.Infrastructure.dll
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\Newtonsoft.Json.dll
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\System.Web.Helpers.dll
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\System.Web.Mvc.dll
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\System.Web.Optimization.dll
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\System.Web.Razor.dll
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\System.Web.WebPages.Deployment.dll
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\System.Web.WebPages.dll
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\System.Web.WebPages.Razor.dll
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\WebApplicationModel.dll
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\WebGrease.dll
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\WebApplicationModel.pdb
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\itextsharp.xml
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\System.Web.Helpers.xml
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\System.Web.Mvc.xml
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\System.Web.Optimization.xml
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\System.Web.Razor.xml
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\System.Web.WebPages.xml
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\System.Web.WebPages.Deployment.xml
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\System.Web.WebPages.Razor.xml
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\Antlr3.Runtime.pdb
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\Newtonsoft.Json.xml
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\EntityFramework.xml
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\bin\EntityFramework.SqlServer.xml
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\obj\Debug\WebApplication.csprojResolveAssemblyReference.cache
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\obj\Debug\WebApplication.dll
+C:\Repos\Fuente Solucion-PayRoll AdminLTE\WebApplication\obj\Debug\WebApplication.pdb
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\csc.exe
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\csc.exe.config
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\csc.rsp
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\csi.exe
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\csi.rsp
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\System.AppContext.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\System.Collections.Immutable.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\System.IO.FileSystem.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\System.Reflection.Metadata.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\vbc.exe
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\vbc.exe.config
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\vbc.rsp
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\VBCSCompiler.exe
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\roslyn\VBCSCompiler.exe.config
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\WebApplication.dll.config
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\WebApplication.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\WebApplication.pdb
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\es-CL\WebApplication.resources.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\Antlr3.Runtime.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\Circon.Common.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\Circon.Mvc.Helpers.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\EntityFramework.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\EntityFramework.SqlServer.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\Gma.QrCodeNet.Encoding.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\itextsharp.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\Microsoft.Web.Infrastructure.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\Newtonsoft.Json.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\System.Web.Helpers.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\System.Web.Mvc.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\System.Web.Optimization.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\System.Web.Razor.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\System.Web.WebPages.Deployment.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\System.Web.WebPages.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\System.Web.WebPages.Razor.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\WebApplicationModel.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\WebGrease.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\WebApplicationModel.pdb
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\Antlr3.Runtime.pdb
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\Gma.QrCodeNet.Encoding.pdb
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\Gma.QrCodeNet.Encoding.xml
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\itextsharp.xml
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\Newtonsoft.Json.xml
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\System.Web.Optimization.xml
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\System.Web.Helpers.xml
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\System.Web.Mvc.xml
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\System.Web.Razor.xml
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\System.Web.WebPages.xml
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\System.Web.WebPages.Deployment.xml
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\System.Web.WebPages.Razor.xml
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\EntityFramework.xml
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\bin\EntityFramework.SqlServer.xml
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\obj\Debug\WebApplication.csprojResolveAssemblyReference.cache
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\obj\Debug\WebApplication.App_GlobalResources.Pay.Lenguaje.resources
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\obj\Debug\WebApplication.App_GlobalResources.Pay.Lenguaje.es-CL.resources
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\obj\Debug\WebApplication.csproj.GenerateResource.Cache
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\obj\Debug\es-CL\WebApplication.resources.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\obj\Debug\WebApplication.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\obj\Debug\WebApplication.pdb

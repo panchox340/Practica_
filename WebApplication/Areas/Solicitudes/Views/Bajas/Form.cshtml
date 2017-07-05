@@ -1,0 +1,198 @@
+﻿@model WebApplicationModel.Finiquito
+@using WebApplication.App_GlobalResources
+@using WebApplication.Extensions
+
+<style>
+.fuente {
+        color:white;
+    }
+</style>
+@using (Html.BeginForm((Model == null ? "Create" : "Edit"), "Bajas", FormMethod.Post, new { @id = "mant-form", @novalidate = "novalidate", role = "form", @enctype = "multipart/form-data" }))
+{
+    <div class="box-header with-border" style="background-color:#dd4b39;">
+        <h3 class="box-title fuente">Formulario Finiquito Personal</h3>
+        <span></span><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    </div>
+
+    @Html.AntiForgeryToken()
+    @(Model == null ? new MvcHtmlString("") : Html.HiddenFor(p => p.id_baja))
+    @(Model == null ? new MvcHtmlString("") : Html.HiddenFor(c => c.id_novedad))    
+
+
+
+    <div class="modal-body">
+        <div class="box-body">
+            <ul id="myTab1" class="nav nav-tabs bordered cabecera_tab modal-body box-body">
+                <li class="active"><a href="#s1" data-toggle="tab" aria-expanded="false" id="cabecera_tab1">Datos Personales </a></li>
+                <li class=""><a href="#s2" data-toggle="tab" aria-expanded="true" id="cabecera_tab2">Datos Contractuales </a></li>
+                <li class=""><a href="#s3" data-toggle="tab" aria-expanded="true" id="cabecera_tab2">Archivo Adjunto </a></li>
+            </ul>
+            <div id="myTabContent1" class="tab-content formcolor" style="padding:20px;">
+                <div class="tab-pane fade active in form-group" id="s1">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon3">Nombre</span>
+                        @Html.TextBoxFor(model => model.nombres, new { type = "text", @class = "form-control", placeholder = "" })
+                    </div>
+                    <br />
+                    <div class="input-group">
+                        <span class="input-group-addon" id="">Apellidos</span>
+                        @Html.TextBoxFor(model => model.apellido, new { type = "text", @class = "form-control", placeholder = "" })
+                    </div>
+                    <br />
+                    <div class="input-group">
+                        <span class="input-group-addon" id="">Rut</span>
+                        @Html.TextBoxFor(model => model.rut, new { type = "text", @class = "form-control", placeholder = "" })
+                    </div>
+                    <br />
+                    <div class="input-group">
+                        <span class="input-group-addon" id="">Dirección</span>
+                        @Html.TextBoxFor(model => model.direccion, new { type = "text", @class = "form-control", placeholder = "" })
+                    </div>
+                </div>
+
+                <div class="tab-pane fade  in form-group" id="s2">
+
+                    <div class="input-group">
+                        <span class="input-group-addon" id="">Tipo Contrato</span>
+                        @Html.TextBoxFor(model => model.tipo_contrato, new { type = "text", @class = "form-control", placeholder = "Ingrese Tipo Contrato" })
+                    </div>
+                    <br />
+                    <div class="input-group">
+                        <span class="input-group-addon" id="">Fecha Finiquito</span>
+                        @Html.TextBoxFor(model => model.fecha_fin, new { type = "date", @class = "form-control", placeholder = "Ingrese Fecha finiquito" })
+                    </div>
+                    <br />
+                    <div class="input-group">
+                        <span class="input-group-addon" id="">Causal</span>
+                        @Html.DropDownList("causal", (SelectList)ViewBag.selectlistParametros, "Seleccione...", new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="tab-pane fade in form-group" id="s3">
+                    <button id="agregar" type="button" class="form-control" onclick="addControl()">Ingresar más documentos</button>
+                    <div class="archive">
+                        <input type="file" name="files" class="uploadfile" />
+                        @Html.DropDownList("documento", (SelectList)ViewBag.selectlistdocus," ", new { @class = "form-control docu" })
+                    </div>   
+                    <br />
+                    <div class="archive">
+                        <input type="file" name="files" class="uploadfile" />
+                        @Html.DropDownList("documento", (SelectList)ViewBag.selectlistdocus, " ", new { @class = "form-control docu"  })
+                    </div> 
+                    <br />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.box-body -->
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">@Pay_Lenguaje.cerrar</button>
+        <button type="button" class="btn btn-danger" action="save">@Pay_Lenguaje.guardar_cambios</button>
+    </div>
+}
+
+<script>
+    setFormulario(
+        "mant-form",
+        {
+            Nombre: { required: true },
+            apellidos: { required: true },
+            rut: { required: true },
+            tipo_contrato: { required: true },
+            fecha_fin: { required: true },
+            causal: { required: true },
+            direccion: { required: true },
+            documento: { required: true }
+        },
+        {
+            Nombre: { required: '<span class="help-block error" ><i class="fa fa-warning"></i> Ingrese Nombre valido</span> ' },
+            apellidos: { required: '<span class="help-block error" ><i class="fa fa-warning"></i> Ingrese apellido valido</span> ' },
+            rut: { required: '<span class="help-block error" ><i class="fa fa-warning"></i> Ingrese rut valido</span> ' },
+            tipo_contrato: { required: '<span class="help-block error" ><i class="fa fa-warning"></i> Ingrese tipo de contrato</span> ' },
+            fecha_fin: { required: '<span class="help-block error" ><i class="fa fa-warning"></i> Ingrese fecha de finiquito valida</span> ' },
+            direccion: { required: '<span class="help-block error" ><i class="fa fa-warning"></i> Ingrese direccion valida</span> ' },
+            causal: { required: '<span class="help-block error" ><i class="fa fa-warning"></i> Ingrese causa de despido</span> ' },
+            documento: { required: '<span class="help-block error" ><i class="fa fa-warning"></i> Ingrese tipo de documento</span> ' },
+        }
+    );
+
+    $('#rut').mask('00.000.000-0', { reverse: true });
+
+
+    var titulo = [];
+    var detalle = [];
+    var lista = [{
+        index: "",
+        tit: "",
+        det:""
+    }];
+
+    $("#rut").rut().on('rutInvalido', function (e) {
+        alert("El rut " + $(this).val() + " es inválido");
+        $("button[action=save]").prop('disabled', true);
+    });
+
+    $("#rut").rut().on('rutValido', function (e) {
+        $("button[action=save]").prop('disabled', false);
+    });
+
+    var docu = "";
+    var det = "";
+
+    $(".archive").on('change', function () {
+        docu = $(this).find(".file-caption-name").text();
+        det = $(this).find(".docu").val();
+            console.log(docu + " " + det);
+            if (docu == '' || det == '') {
+                $("button[action=save]").prop('disabled', true);
+            } else {
+                $("button[action=save]").prop('disabled', false);
+            }
+        });
+    
+    $("button[action=save]").click(function () {
+        $(".file-caption-name").each(function (index) {
+            titulo[index] = $(this).prop("title");
+        });
+        $(".docu").each(function (index) {
+            detalle[index] = $(this).val();
+        });
+        for (var i in titulo) {
+            lista.push({
+                index: i,
+                tit: titulo[i],
+                det: detalle[i]
+            });            
+        }
+    });
+
+
+    $(".uploadfile").fileinput({
+        showPreview: false,
+        showCancel: true,
+        showUpload: false,
+        browseClass: 'btn btn-warning',
+        browseLabel: "Seleccione Documento",
+        browseIcon: "<span class='glyphicon glyphicon-open-file' aria-hidden='true'></span>",
+        removeClass: "btn btn-danger",
+        removeLabel: "Delete",
+        removeIcon: "<i class=\"glyphicon glyphicon-trash\"></i>",
+        showCancel: true,
+        uploadExtraData: function () {
+            return {
+                documento: JSON.stringify(lista)
+            };
+        }
+    });
+
+
+    function addControl($target_div,optionList) {
+        var combo = $("<select></select>").attr("id", "documento").attr("name", "documento").attr("class", "form-control docu");
+        $.each(optionList, function (i, element) {
+            combo.append("<option>" + element + "</option>");
+        });
+        return combo;
+    }
+
+</script>

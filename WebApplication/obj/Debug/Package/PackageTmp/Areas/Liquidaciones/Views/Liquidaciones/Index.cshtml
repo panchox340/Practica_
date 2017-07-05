@@ -1,0 +1,79 @@
+﻿@{ 
+    DateTime fechaUltimaLiberacion = (DateTime)ViewBag.fechaUltimaLiberacion;
+}
+<div class="">
+    <div class="box">
+        <div class="box-header">
+            <h3 class="box-title">Liquidaciones a la Fecha</h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body table-responsive no-padding">
+            <table class="table table-hover">
+                <tbody id="tbody_table">
+                    <tr>
+                        <th></th>
+                        <th>Mes</th>
+                        <th>Año</th>
+                        <th>Dias trabajados</th>
+                    </tr>
+                    @{
+                        for (int i = 0; i < 24; i++)
+                        {
+                           
+                            <tr>
+                                <td><a href="@Url.Action("Liquidacion","Liquidaciones", new {Area = "Liquidaciones", fecha = fechaUltimaLiberacion.AddMonths(-i).ToString("yyyy-MM-dd") })" class="btn btn-default modal-ajax-load pdf-size" data-toggle="modal" data-target="#myModal" data-remote="false"><i class="fa fa fa-file-pdf-o"></i></a></td>
+                                <td>@fechaUltimaLiberacion.AddMonths(-i).ToString("MMMM")</td>
+                                <td>@fechaUltimaLiberacion.AddMonths(-i).ToString("yyyy")</td>
+                                <td>30</td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+        <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+</div>
+
+
+@*<div class="col-md-6">
+    <!-- general form elements -->
+    <div class="box box-primary">
+        <div class="box-header with-border">
+            <h3 class="box-title">Liquidaciones</h3>
+        </div>
+        <!-- /.box-header -->
+        <!-- form start -->
+        <div class="box-body">
+            <div class="form-group">
+                <label>Año Liquidacion</label>
+                <select class="form-control">
+                    <option>option 1</option>
+                    <option>option 2</option>
+                    <option>option 3</option>
+                    <option>option 4</option>
+                    <option>option 5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Mes Liquidacion</label>
+                <select class="form-control">
+                    <option>option 1</option>
+                    <option>option 2</option>
+                    <option>option 3</option>
+                    <option>option 4</option>
+                    <option>option 5</option>
+                </select>
+            </div>
+        </div>
+        <div class="box-footer">
+            <a href="@Url.Action("Create","Liquidaciones", new {Area = "Liquidaciones" })" class="btn btn-default modal-ajax-load" data-toggle="modal" data-target="#myModal" data-remote="false">Lanza Modal Normal Ajax, boton con clase modal-ajax-load</a>
+            <a href="@Url.Action("Liquidacion","Liquidaciones", new {Area = "Liquidaciones" })" class="btn btn-default modal-ajax-load pdf-size" data-toggle="modal" data-target="#myModal" data-remote="false">Lanza Modal size 100%, boton con clase pdf-size</a>
+            <a href="@Url.Action("Liquidacion","Liquidaciones", new {Area = "Liquidaciones" })" data-remote="false" data-toggle="modal" data-target="#myModal" class="btn btn-default">
+                Launch Modal
+            </a>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
+        </div>
+    </div>
+</div>*@

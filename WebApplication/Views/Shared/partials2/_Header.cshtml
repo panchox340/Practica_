@@ -1,0 +1,45 @@
+﻿@using WebApplication.Extensions
+<header class="main-header">
+    <a href="@Url.Action("Home", "Home")" class="logo">
+        <span class="logo-mini"><img src="~/img/logo3.0.png" /></span>
+        <span class="logo-lg"><img src="~/img/logo3.png" /></span>
+    </a>
+    <nav class="navbar navbar-static-top" role="navigation">
+        <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+                <li class="dropdown messages-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    </a>
+                </li>
+                <li class="dropdown notifications-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-flag-o"></i>
+                        @*<span class="label label-warning">10</span>*@
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="header">Seleccione Lenguaje</li>
+                        <li>
+                            <ul class="menu">
+                                <li>
+                                    <a href="@Url.Action("ChangeLanguage","Home", new {lang="en"})">
+                                        <i class="fa fa-flag-o text-aqua"></i> English
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("ChangeLanguage","Home", new {lang= "es-CL" })">
+                                        <i class="fa fa-flag-o text-yellow"></i> Español
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                      
+                    </ul>
+                </li>
+                <li>@Html.Partial("_LoginPartial")</li>
+                   
+                
+                @*<li><a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a></li>*@
+            </ul>
+        </div>
+    </nav>
+</header>

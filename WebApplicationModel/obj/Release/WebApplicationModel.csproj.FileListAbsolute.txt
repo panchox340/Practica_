@@ -1,0 +1,9 @@
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplicationModel\bin\Release\WebApplicationModel.dll.config
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplicationModel\bin\Release\WebApplicationModel.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplicationModel\bin\Release\WebApplicationModel.pdb
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplicationModel\bin\Release\EntityFramework.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplicationModel\bin\Release\EntityFramework.SqlServer.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplicationModel\bin\Release\EntityFramework.xml
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplicationModel\bin\Release\EntityFramework.SqlServer.xml
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplicationModel\obj\Release\WebApplicationModel.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplicationModel\obj\Release\WebApplicationModel.pdb

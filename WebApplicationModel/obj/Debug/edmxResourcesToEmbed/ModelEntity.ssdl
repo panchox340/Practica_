@@ -1,0 +1,736 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PAYROLL_PreProdModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Avisos">
+    <Key>
+      <PropertyRef Name="id_avisos" />
+    </Key>
+    <Property Name="id_avisos" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="titulo_aviso" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="desc_aviso" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="fecha_aviso" Type="datetime" Nullable="false" />
+    <Property Name="id_cliente" Type="int" Nullable="false" />
+    <Property Name="aprobado" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="id_cliente" />
+    </Key>
+    <Property Name="id_cliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nom_emp" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="giro" Type="varchar(max)" Nullable="false" />
+    <Property Name="RUT" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Direccion" Type="varchar" MaxLength="50" />
+    <Property Name="Nom_cor_emp" Type="varchar" MaxLength="50" />
+    <Property Name="Fecha_libe_liqui" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'PAYROLL_PreProd.dbo.ConfigPDF' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ConfigPDF">
+    <Key>
+      <PropertyRef Name="tag" />
+      <PropertyRef Name="campo" />
+      <PropertyRef Name="id_cliente" />
+    </Key>
+    <Property Name="tag" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="campo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="id_cliente" Type="int" Nullable="false" />
+    <Property Name="label" Type="varchar" MaxLength="50" />
+    <Property Name="orden" Type="int" />
+  </EntityType>
+  <EntityType Name="Documento">
+    <Key>
+      <PropertyRef Name="id_doc" />
+    </Key>
+    <Property Name="id_doc" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_novedad" Type="int" />
+    <Property Name="ruta" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="nombre_original" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="nombre_asignado" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="categoria" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="estado" Type="int" Nullable="false" />
+    <Property Name="id_cliente" Type="int" />
+  </EntityType>
+  <EntityType Name="Finiquito">
+    <Key>
+      <PropertyRef Name="id_baja" />
+    </Key>
+    <Property Name="id_baja" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombres" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="apellido" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="rut" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="direccion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="tipo_contrato" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="fecha_fin" Type="smalldatetime" Nullable="false" />
+    <Property Name="causal" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="nombre_sol" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="id_novedad" Type="int" Nullable="false" />
+    <Property Name="estado_aprov" Type="int" />
+  </EntityType>
+  <EntityType Name="Ingresos">
+    <Key>
+      <PropertyRef Name="id_ing" />
+    </Key>
+    <Property Name="id_ing" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombres" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="apellido" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="rut" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="nacionalidad" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="fecha_nacimiento" Type="datetime" Nullable="false" />
+    <Property Name="direccion" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="estado_civil" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="mail" Type="varchar" MaxLength="100" />
+    <Property Name="telefono" Type="varchar" MaxLength="50" />
+    <Property Name="id_usu" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="id_novedad" Type="int" Nullable="false" />
+    <Property Name="isapre" Type="varchar" MaxLength="50" />
+    <Property Name="AFP" Type="varchar" MaxLength="50" />
+    <Property Name="Fonasa" Type="varchar" MaxLength="50" />
+    <Property Name="cargo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="estado_aprov" Type="int" />
+  </EntityType>
+  <EntityType Name="Novedad">
+    <Key>
+      <PropertyRef Name="id_novedad" />
+    </Key>
+    <Property Name="id_novedad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fecha_novedad" Type="smalldatetime" Nullable="false" />
+    <Property Name="id_cliente" Type="int" Nullable="false" />
+    <Property Name="id_usu" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="usuario_mod" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="fecha_mod" Type="smalldatetime" Nullable="false" />
+    <Property Name="estado" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="tipo_nov" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Otra_solicitud">
+    <Key>
+      <PropertyRef Name="id_otro" />
+    </Key>
+    <Property Name="id_otro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_novedad" Type="int" Nullable="false" />
+    <Property Name="descripcion" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="monto" Type="bigint" />
+  </EntityType>
+  <EntityType Name="parametros">
+    <Key>
+      <PropertyRef Name="valor" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="grupo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="detalle" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="valor" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="texto" Type="varchar" MaxLength="200" />
+    <Property Name="orden" Type="int" />
+  </EntityType>
+  <EntityType Name="Periodo_liquidaciones">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="mes" Type="int" Nullable="false" />
+    <Property Name="ano" Type="int" Nullable="false" />
+    <Property Name="liberado" Type="bit" Nullable="false" />
+    <Property Name="id_cliente" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'PAYROLL_PreProd.dbo.Periodos' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Periodos">
+    <Key>
+      <PropertyRef Name="id_periodo" />
+    </Key>
+    <Property Name="id_periodo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fecha_fin_novedades" Type="datetime" />
+    <Property Name="fecha_inicio" Type="datetime" />
+    <Property Name="fecha_fin" Type="datetime" />
+    <Property Name="id_cliente" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'PAYROLL_PreProd.dbo.Permisos' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Permisos">
+    <Key>
+      <PropertyRef Name="id_usu" />
+      <PropertyRef Name="id_parametro" />
+      <PropertyRef Name="id_cliente" />
+    </Key>
+    <Property Name="id_usu" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="id_parametro" Type="int" Nullable="false" />
+    <Property Name="id_cliente" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'PAYROLL_PreProd.dbo.Relacion_Usuarios' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Relacion_Usuarios">
+    <Key>
+      <PropertyRef Name="superior" />
+      <PropertyRef Name="subordinado" />
+    </Key>
+    <Property Name="superior" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="subordinado" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Remuneracion">
+    <Key>
+      <PropertyRef Name="id_rem" />
+    </Key>
+    <Property Name="id_rem" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_novedad" Type="int" Nullable="false" />
+    <Property Name="comentario" Type="varchar" MaxLength="1000" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tipo_novedad">
+    <Key>
+      <PropertyRef Name="id_tipo" />
+    </Key>
+    <Property Name="id_tipo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="valorizado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tipo_usu">
+    <Key>
+      <PropertyRef Name="id_tipo_usu" />
+    </Key>
+    <Property Name="id_tipo_usu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="id_usu" />
+    </Key>
+    <Property Name="id_usu" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Nom_usu" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="pass_usu" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="id_cliente" Type="int" Nullable="false" />
+    <Property Name="id_tipo_usu" Type="int" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="fechaIngreso" Type="smalldatetime" Nullable="false" />
+    <Property Name="rut" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'PAYROLL_PreProd.dbo.Usuario_Cliente' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Usuario_Cliente">
+    <Key>
+      <PropertyRef Name="id_usu" />
+      <PropertyRef Name="id_cliente" />
+    </Key>
+    <Property Name="id_usu" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="id_cliente" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Vacaciones">
+    <Key>
+      <PropertyRef Name="id_vac" />
+    </Key>
+    <Property Name="id_vac" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fecha_ini" Type="smalldatetime" Nullable="false" />
+    <Property Name="fecha_fin" Type="smalldatetime" Nullable="false" />
+    <Property Name="cant_dias" Type="int" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="50" />
+    <Property Name="id_novedad" Type="int" Nullable="false" />
+    <Property Name="id_usu" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="estado_aprov" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'PAYROLL_PreProd.dbo.ViewOtraSolicitud' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ViewOtraSolicitud">
+    <Key>
+      <PropertyRef Name="id_otro" />
+    </Key>
+    <Property Name="usuario" Type="varchar" MaxLength="50" />
+    <Property Name="id_otro" Type="int" Nullable="false" />
+    <Property Name="Nom_cor_emp" Type="varchar" MaxLength="50" />
+    <Property Name="tipo_nov" Type="varchar" MaxLength="50" />
+    <Property Name="monto" Type="bigint" />
+    <Property Name="empleado" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_avisos_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+    <End Role="Avisos" Type="Self.Avisos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="id_cliente" />
+      </Principal>
+      <Dependent Role="Avisos">
+        <PropertyRef Name="id_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Avisos_parametros">
+    <End Role="parametros" Type="Self.parametros" Multiplicity="1" />
+    <End Role="Avisos" Type="Self.Avisos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="parametros">
+        <PropertyRef Name="valor" />
+      </Principal>
+      <Dependent Role="Avisos">
+        <PropertyRef Name="aprobado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Documento_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
+    <End Role="Documento" Type="Self.Documento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="id_cliente" />
+      </Principal>
+      <Dependent Role="Documento">
+        <PropertyRef Name="id_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Documento_Novedad">
+    <End Role="Novedad" Type="Self.Novedad" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Documento" Type="Self.Documento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Novedad">
+        <PropertyRef Name="id_novedad" />
+      </Principal>
+      <Dependent Role="Documento">
+        <PropertyRef Name="id_novedad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Documento_parametros">
+    <End Role="parametros" Type="Self.parametros" Multiplicity="1" />
+    <End Role="Documento" Type="Self.Documento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="parametros">
+        <PropertyRef Name="valor" />
+      </Principal>
+      <Dependent Role="Documento">
+        <PropertyRef Name="categoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Finiquito_Novedad">
+    <End Role="Novedad" Type="Self.Novedad" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Finiquito" Type="Self.Finiquito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Novedad">
+        <PropertyRef Name="id_novedad" />
+      </Principal>
+      <Dependent Role="Finiquito">
+        <PropertyRef Name="id_novedad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Finiquito_Parametro">
+    <End Role="parametros" Type="Self.parametros" Multiplicity="1" />
+    <End Role="Finiquito" Type="Self.Finiquito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="parametros">
+        <PropertyRef Name="valor" />
+      </Principal>
+      <Dependent Role="Finiquito">
+        <PropertyRef Name="causal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ingresos_Novedad">
+    <End Role="Novedad" Type="Self.Novedad" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Ingresos" Type="Self.Ingresos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Novedad">
+        <PropertyRef Name="id_novedad" />
+      </Principal>
+      <Dependent Role="Ingresos">
+        <PropertyRef Name="id_novedad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NovedadesTipoNovedad">
+    <End Role="Tipo_novedad" Type="Self.Tipo_novedad" Multiplicity="1" />
+    <End Role="Novedad" Type="Self.Novedad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_novedad">
+        <PropertyRef Name="id_tipo" />
+      </Principal>
+      <Dependent Role="Novedad">
+        <PropertyRef Name="tipo_nov" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Otra_solicitud_Novedad">
+    <End Role="Novedad" Type="Self.Novedad" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Otra_solicitud" Type="Self.Otra_solicitud" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Novedad">
+        <PropertyRef Name="id_novedad" />
+      </Principal>
+      <Dependent Role="Otra_solicitud">
+        <PropertyRef Name="id_novedad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Periodo_liquidaciones_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
+    <End Role="Periodo_liquidaciones" Type="Self.Periodo_liquidaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="id_cliente" />
+      </Principal>
+      <Dependent Role="Periodo_liquidaciones">
+        <PropertyRef Name="id_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Periodos_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
+    <End Role="Periodos" Type="Self.Periodos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="id_cliente" />
+      </Principal>
+      <Dependent Role="Periodos">
+        <PropertyRef Name="id_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Permisos_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+    <End Role="Permisos" Type="Self.Permisos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="id_cliente" />
+      </Principal>
+      <Dependent Role="Permisos">
+        <PropertyRef Name="id_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_Permisos_parametros' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_Permisos_parametros" />-->
+  <Association Name="FK_Permisos_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Permisos" Type="Self.Permisos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="id_usu" />
+      </Principal>
+      <Dependent Role="Permisos">
+        <PropertyRef Name="id_usu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Relacion_Usuarios_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Relacion_Usuarios" Type="Self.Relacion_Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="id_usu" />
+      </Principal>
+      <Dependent Role="Relacion_Usuarios">
+        <PropertyRef Name="superior" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Relacion_Usuarios_Usuario1">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Relacion_Usuarios" Type="Self.Relacion_Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="id_usu" />
+      </Principal>
+      <Dependent Role="Relacion_Usuarios">
+        <PropertyRef Name="subordinado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Remuneracion_Novedad">
+    <End Role="Novedad" Type="Self.Novedad" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Remuneracion" Type="Self.Remuneracion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Novedad">
+        <PropertyRef Name="id_novedad" />
+      </Principal>
+      <Dependent Role="Remuneracion">
+        <PropertyRef Name="id_novedad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="id_cliente" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="id_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_Cliente_Cliente">
+    <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
+    <End Role="Usuario_Cliente" Type="Self.Usuario_Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="id_cliente" />
+      </Principal>
+      <Dependent Role="Usuario_Cliente">
+        <PropertyRef Name="id_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_Cliente_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Usuario_Cliente" Type="Self.Usuario_Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="id_usu" />
+      </Principal>
+      <Dependent Role="Usuario_Cliente">
+        <PropertyRef Name="id_usu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_tipo_usu">
+    <End Role="tipo_usu" Type="Self.tipo_usu" Multiplicity="1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tipo_usu">
+        <PropertyRef Name="id_tipo_usu" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="id_tipo_usu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vacaciones_Novedad">
+    <End Role="Novedad" Type="Self.Novedad" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Vacaciones" Type="Self.Vacaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Novedad">
+        <PropertyRef Name="id_novedad" />
+      </Principal>
+      <Dependent Role="Vacaciones">
+        <PropertyRef Name="id_novedad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="EstandarizarRut" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+    <Parameter Name="RUT" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="fn_subordinadosPorUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Usuario" Type="varchar" Mode="In" />
+    <Parameter Name="Nivel" Type="int" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="NIVEL" Type="int" />
+          <Property Name="id_usu" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Nom_usu" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="pass_usu" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="id_cliente" Type="int" Nullable="false" />
+          <Property Name="id_tipo_usu" Type="int" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="fechaIngreso" Type="smalldatetime" Nullable="false" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="pa_selDatosCertAntiguedad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="USU_ID" Type="varchar" Mode="In" />
+    <Parameter Name="NOM_CLIENTE_DB" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="pa_selDatosLiquidacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="USU_ID" Type="varchar" Mode="In" />
+    <Parameter Name="NOM_CLIENTE_DB" Type="varchar" Mode="In" />
+    <Parameter Name="Mes_consul" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_selPeriodoUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fecha" Type="date" Mode="In" />
+    <Parameter Name="NOM_CLIENTE_DB" Type="varchar" Mode="In" />
+    <Parameter Name="VALOR_RET" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="PAYROLL_PreProdModelStoreContainer">
+    <EntitySet Name="Avisos" EntityType="Self.Avisos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Documento" EntityType="Self.Documento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Finiquito" EntityType="Self.Finiquito" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ingresos" EntityType="Self.Ingresos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Novedad" EntityType="Self.Novedad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Otra_solicitud" EntityType="Self.Otra_solicitud" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="parametros" EntityType="Self.parametros" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Periodo_liquidaciones" EntityType="Self.Periodo_liquidaciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Remuneracion" EntityType="Self.Remuneracion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tipo_novedad" EntityType="Self.Tipo_novedad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tipo_usu" EntityType="Self.tipo_usu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vacaciones" EntityType="Self.Vacaciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ConfigPDF" EntityType="Self.ConfigPDF" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ConfigPDF].[tag] AS [tag], 
+    [ConfigPDF].[campo] AS [campo], 
+    [ConfigPDF].[id_cliente] AS [id_cliente], 
+    [ConfigPDF].[label] AS [label], 
+    [ConfigPDF].[orden] AS [orden]
+    FROM [dbo].[ConfigPDF] AS [ConfigPDF]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Periodos" EntityType="Self.Periodos" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Periodos].[id_periodo] AS [id_periodo], 
+    [Periodos].[fecha_fin_novedades] AS [fecha_fin_novedades], 
+    [Periodos].[fecha_inicio] AS [fecha_inicio], 
+    [Periodos].[fecha_fin] AS [fecha_fin], 
+    [Periodos].[id_cliente] AS [id_cliente]
+    FROM [dbo].[Periodos] AS [Periodos]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Permisos" EntityType="Self.Permisos" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Permisos].[id_usu] AS [id_usu], 
+    [Permisos].[id_parametro] AS [id_parametro], 
+    [Permisos].[id_cliente] AS [id_cliente]
+    FROM [dbo].[Permisos] AS [Permisos]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Relacion_Usuarios" EntityType="Self.Relacion_Usuarios" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Relacion_Usuarios].[superior] AS [superior], 
+    [Relacion_Usuarios].[subordinado] AS [subordinado]
+    FROM [dbo].[Relacion_Usuarios] AS [Relacion_Usuarios]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Usuario_Cliente" EntityType="Self.Usuario_Cliente" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Usuario_Cliente].[id_usu] AS [id_usu], 
+    [Usuario_Cliente].[id_cliente] AS [id_cliente]
+    FROM [dbo].[Usuario_Cliente] AS [Usuario_Cliente]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ViewOtraSolicitud" EntityType="Self.ViewOtraSolicitud" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ViewOtraSolicitud].[usuario] AS [usuario], 
+    [ViewOtraSolicitud].[id_otro] AS [id_otro], 
+    [ViewOtraSolicitud].[Nom_cor_emp] AS [Nom_cor_emp], 
+    [ViewOtraSolicitud].[tipo_nov] AS [tipo_nov], 
+    [ViewOtraSolicitud].[monto] AS [monto], 
+    [ViewOtraSolicitud].[empleado] AS [empleado]
+    FROM [dbo].[ViewOtraSolicitud] AS [ViewOtraSolicitud]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_avisos_Cliente" Association="Self.FK_avisos_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Avisos" EntitySet="Avisos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Avisos_parametros" Association="Self.FK_Avisos_parametros">
+      <End Role="parametros" EntitySet="parametros" />
+      <End Role="Avisos" EntitySet="Avisos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Documento_Cliente" Association="Self.FK_Documento_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Documento" EntitySet="Documento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Documento_Novedad" Association="Self.FK_Documento_Novedad">
+      <End Role="Novedad" EntitySet="Novedad" />
+      <End Role="Documento" EntitySet="Documento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Documento_parametros" Association="Self.FK_Documento_parametros">
+      <End Role="parametros" EntitySet="parametros" />
+      <End Role="Documento" EntitySet="Documento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Finiquito_Novedad" Association="Self.FK_Finiquito_Novedad">
+      <End Role="Novedad" EntitySet="Novedad" />
+      <End Role="Finiquito" EntitySet="Finiquito" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Finiquito_Parametro" Association="Self.FK_Finiquito_Parametro">
+      <End Role="parametros" EntitySet="parametros" />
+      <End Role="Finiquito" EntitySet="Finiquito" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ingresos_Novedad" Association="Self.FK_Ingresos_Novedad">
+      <End Role="Novedad" EntitySet="Novedad" />
+      <End Role="Ingresos" EntitySet="Ingresos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NovedadesTipoNovedad" Association="Self.FK_NovedadesTipoNovedad">
+      <End Role="Tipo_novedad" EntitySet="Tipo_novedad" />
+      <End Role="Novedad" EntitySet="Novedad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Otra_solicitud_Novedad" Association="Self.FK_Otra_solicitud_Novedad">
+      <End Role="Novedad" EntitySet="Novedad" />
+      <End Role="Otra_solicitud" EntitySet="Otra_solicitud" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Periodo_liquidaciones_Cliente" Association="Self.FK_Periodo_liquidaciones_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Periodo_liquidaciones" EntitySet="Periodo_liquidaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Periodos_Cliente" Association="Self.FK_Periodos_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Periodos" EntitySet="Periodos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Permisos_Cliente" Association="Self.FK_Permisos_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Permisos" EntitySet="Permisos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Permisos_Usuario" Association="Self.FK_Permisos_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Permisos" EntitySet="Permisos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Relacion_Usuarios_Usuario" Association="Self.FK_Relacion_Usuarios_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Relacion_Usuarios" EntitySet="Relacion_Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Relacion_Usuarios_Usuario1" Association="Self.FK_Relacion_Usuarios_Usuario1">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Relacion_Usuarios" EntitySet="Relacion_Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Remuneracion_Novedad" Association="Self.FK_Remuneracion_Novedad">
+      <End Role="Novedad" EntitySet="Novedad" />
+      <End Role="Remuneracion" EntitySet="Remuneracion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_Cliente" Association="Self.FK_Usuario_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_Cliente_Cliente" Association="Self.FK_Usuario_Cliente_Cliente">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Usuario_Cliente" EntitySet="Usuario_Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_Cliente_Usuario" Association="Self.FK_Usuario_Cliente_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Usuario_Cliente" EntitySet="Usuario_Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_tipo_usu" Association="Self.FK_Usuario_tipo_usu">
+      <End Role="tipo_usu" EntitySet="tipo_usu" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vacaciones_Novedad" Association="Self.FK_Vacaciones_Novedad">
+      <End Role="Novedad" EntitySet="Novedad" />
+      <End Role="Vacaciones" EntitySet="Vacaciones" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

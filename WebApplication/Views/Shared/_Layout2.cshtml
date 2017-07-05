@@ -1,0 +1,84 @@
+﻿@using WebApplication.App_GlobalResources
+@using WebApplication.Extensions
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PAYROLL MANAGEMENT SYSTEM</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    @Styles.Render("~/AdminLTE/css")
+
+    @*@Styles.Render("~/Styles/AdminLTE/plugins/font-awesome/css")
+        @Styles.Render("~/Styles/AdminLTE/plugins/ionicons/css")
+        @Styles.Render("~/Styles/AdminLTE/bootstrap/css")
+        @Styles.Render("~/Styles/AdminLTE/dist/css")
+        @Styles.Render("~/Styles/AdminLTE/dist/css/skins")
+        @Styles.Render("~/Styles/iziToast-master")*@
+
+    @Styles.Render("~/AdminLTE/plugins/fullcalendar/css/fullcalendar.css")
+
+    @*@Scripts.Render("~/Scripts/AdminLTE/plugins/jquery/js")
+        @Scripts.Render("~/Scripts/AdminLTE/bootstrap/js")
+        @Scripts.Render("~/Scripts/AdminLTE/plugins/slimscroll/js")
+        @Scripts.Render("~/Scripts/AdminLTE/plugins/fastclick/js")
+        @Scripts.Render("~/Scripts/Shared/_Layout")
+        @Scripts.Render("~/Scripts/AdminLTE/dist/js")
+        @Scripts.Render("~/Scripts/AdminLTE/plugins/jquery-validate/js")
+        @Scripts.Render("~/Scripts/Notification/iziToast-master")
+        @Scripts.Render("~/Scripts/AdminLTE/plugins/momentjs/js/moment.min.js")
+        @Scripts.Render("~/Scripts/AdminLTE/plugins/fullcalendar/js")
+        @Scripts.Render("~/Scripts/Calendar/Calendar.js")
+        @Scripts.Render("~/Scripts/custom.js")*@
+
+
+    @Scripts.Render("~/AdminLTE/js")
+</head>
+<body class="hold-transition sidebar-mini">
+   
+    <div class="wrapper">
+        @Html.Partial("partials2/_Header")
+
+
+        <aside class="">
+            @Html.Partial("partials2/_Aside")
+        </aside>
+
+            <div id="content" class="content">
+                @RenderBody()
+            </div>
+
+    </div>
+
+    <nav class="control-sidebar control-sidebar-dark">
+        @Html.Partial("partials2/_extraible")
+    </nav>
+    <div class="navbar-fixed-bottom">
+        <footer class="panel-footer">
+            @Html.Partial("partials2/_Footer")
+        </footer>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+               
+
+            </div>
+        </div>
+    </div>
+
+    @*<div class="modal fade" id="Modal_Background" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+            </div>
+        </div>
+    </div>*@
+
+
+
+
+</body>
+
+</html>

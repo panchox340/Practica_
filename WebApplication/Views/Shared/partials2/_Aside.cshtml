@@ -1,0 +1,112 @@
+﻿@using WebApplication.App_GlobalResources
+@using WebApplication.Extensions
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">@Pay_Lenguaje.men_Menu_Prin</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                @*<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Link</a></li>*@
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-folder"></i> @Pay_Lenguaje.men_Documen</a>
+                    <ul class="dropdown-menu">
+                        <li id="left-sidebar-menu-dashboard-dashboardV1"><a href="@Url.Action("Index", "Liquidaciones", new {Area = "Liquidaciones" })" class="main-content active"><i class="fa fa-files-o"></i> @Pay_Lenguaje.men_liquida </a></li>
+                        <li id="left-sidebar-menu-dashboard-dashboardV1"><a href="#" class="main-content"><i class="fa fa-circle-o"></i> Disponible </a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-file"></i> @Pay_Lenguaje.men_certifi<span class=""></span></a>
+                    <ul class="dropdown-menu">
+                        <li id="left-sidebar-menu-dashboard-dashboardV1"><a href="@Url.Action("Index", "Antiguedad", new {Area = "Certificados" })" class="main-content active"><i class="fa fa-files-o"></i> Antiguedad </a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </li>
+
+
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-hand-paper-o"></i> Solicitudes</a>
+                    <ul class="dropdown-menu">
+                        <li id="left-sidebar-menu-dashboard-dashboardV1"><a href="@Url.Action("Index", "SolGenerica", new {Area = "Solicitudes" })" class="main-content active"><i class="fa fa-files-o"></i> Otras </a></li>
+                        <li id="left-sidebar-menu-dashboard-dashboardV1"><a href="@Url.Action("Index", "Vacaciones", new {Area = "Solicitudes" })" class="main-content"><i class="fa fa-circle-o"></i>@Pay_Lenguaje.men_solvaca </a></li>
+                    </ul>
+                </li>
+
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-files-o"></i> @Pay_Lenguaje.men_contrat</a>
+                    <ul class="dropdown-menu">
+                        <li id="left-sidebar-menu-dashboard-dashboardV1"><a href="@Url.Action("Index", "Contratos", new {Area = "Contratos" })"><i class="fa fa-files-o"></i> @Pay_Lenguaje.men_contrat_contra </a></li>
+                        <li id="left-sidebar-menu-dashboard-dashboardV1"><a href="#" class="main-content"><i class="fa fa-circle-o"></i> @Pay_Lenguaje.men_contrat_anex </a></li>
+                        <li id="left-sidebar-menu-dashboard-dashboardV1"><a href="#" class="main-content"><i class="fa fa-circle-o"></i> Otros </a></li>
+                    </ul>
+                </li>
+
+
+
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-plus"></i> Ingresos<span class=""></span></a>
+                    <ul class="dropdown-menu">
+                        <li id="left-sidebar-menu-dashboard-dashboardV1"><a href="@Url.Action("Index", "Altas", new {Area = "Solicitudes" })" class="main-content active"><i class="fa fa-files-o"></i> Ingresos </a></li>
+                    </ul>
+                </li>
+
+
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-times"></i> Finiquitos<span class=""></span></a>
+                    <ul class="dropdown-menu">
+                        <li id="left-sidebar-menu-dashboard-dashboardV1"><a href="@Url.Action("Index", "Bajas", new {Area = "Solicitudes" })" class="main-content active"><i class="fa fa-files-o"></i> Finiquito </a></li>
+                        <li id="left-sidebar-menu-dashboard-dashboardV1"><a href="@Url.Action("Index", "Contratos", new {Area = "Contratos" })" class="main-content active"><i class="fa fa-files-o"></i> Varios </a></li>
+                    </ul>
+                </li>
+
+
+            </ul>
+          
+            @*<ul class="nav navbar-nav navbar-right">
+
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@Pay_Lenguaje.men_contrat<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li id="left-sidebar-menu-dashboard-dashboardV1"><a href="@Url.Action("Index", "Contratos", new {Area = "Contratos" })"><i class="fa fa-files-o"></i> @Pay_Lenguaje.men_contrat_contra </a></li>
+            <li id="left-sidebar-menu-dashboard-dashboardV1"><a href="#" class="main-content"><i class="fa fa-circle-o"></i> @Pay_Lenguaje.men_contrat_anex </a></li>
+            <li id="left-sidebar-menu-dashboard-dashboardV1"><a href="#" class="main-content"><i class="fa fa-circle-o"></i> Otros </a></li>
+        </ul>
+    </li>
+    </ul>>*@
+                <ul class="nav navbar-nav navbar-right">
+                    <p style="font-size:10px;">Usuario Conectado : @User.Identity.GetNombre()</p>
+                </ul>
+
+             
+
+
+            @*<form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>*@
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+

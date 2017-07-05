@@ -1,0 +1,61 @@
+﻿@model List<Dictionary<string, object>>
+
+@{
+    ViewBag.Title = "Finiquitos";
+}
+
+
+
+<a href="@Url.Action("Create","Bajas", new {Area = "Solicitudes"})" class="btn btn-default modal-ajax-load" data-toggle="modal" data-target="#myModal" data-remote="false">Ingresar Finiquito</a>
+
+<div class="">
+    <div class="box">
+        <div class="box-header">
+            <h3 class="box-title">@ViewBag.title</h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body table-responsive no-padding">
+            <table class="table table-hover">
+                <tbody id="tbody_table">
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th>Fecha Solicitud</th>
+                        <th>Nombre</th>
+                        <th>Causal</th>
+                        <th>Aprobación</th>
+                        <th>Documentos</th>
+                    </tr>
+                    @{
+                        foreach (var item in Model)
+                        {
+                            <tr>
+                                <td><a href="@Url.Action("Edit", new { id = item["id_baja"] })" class="btn btn-default modal-ajax-load" data-toggle="modal" data-target="#myModal" data-remote="false"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+
+                                <td>
+                                    <a id="del" href="javascript:confirmDelete('¿Desea elminar el registro?','@Url.Action("Delete", new { id = item["id_baja"] })')" class="btn btn-default" ><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                </td>
+                                @{DateTime fecha = (DateTime)item["fecha_novedad"];
+                                    var lala = fecha.ToString("dd/MM/yyyy");
+                                }
+                                <td>@Html.DisplayFor(modelitem => lala)</td>
+                                <td>@Html.DisplayFor(modelitem => item["nombre"])</td>
+                                <td>@Html.DisplayFor(modelitem => item["detalle"])</td>
+                                <td><a href="javascript:confirmDelete('¿Desea Aprobar el registro?','@Url.Action("aprobacion", new { id = item["id_baja"] })')" class="btn btn-default"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a></td>
+                                <td><a href="@Url.Action("documentos", new { id = item["id_baja"] })" class="btn btn-default modal-ajax-load" data-toggle="modal" data-target="#myModal" data-remote="false"><i class="fa fa-clipboard" aria-hidden="true"></i></a></td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+        <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+</div>
+
+
+
+
+
+

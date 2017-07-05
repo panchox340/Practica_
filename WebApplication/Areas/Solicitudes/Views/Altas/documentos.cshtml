@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.title = "Documentos";
+}
+<div class="">
+    <div class="box">
+        <div class="box-header">
+            <h3 class="box-title">@ViewBag.title</h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body table-responsive no-padding">
+            <table class="table table-hover">
+                <tbody id="tbody_table">
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th>Nombre</th>
+
+
+                    </tr>
+                    @{
+                        foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    <a href="@Url.Action("", new { id = item["id_doc"] })" class="btn btn-default modal-ajax-load pdf-size" data-toggle="modal" data-target="#myModal" data-remote="false"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                </td>
+                                <td>
+                                    <a href="javascript:confirmDelete('¿Desea eliminar el registro?','@Url.Action("", new { id = item["id_doc"] })')" class="btn btn-default"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                </td>
+                                <td>@Html.Raw(item["nombre_original"])</td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+        <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+</div>
+

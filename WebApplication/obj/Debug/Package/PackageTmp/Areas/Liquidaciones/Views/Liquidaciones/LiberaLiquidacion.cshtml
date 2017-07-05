@@ -1,0 +1,92 @@
+﻿@{    
+    var fecha_actual = new DateTime();
+    fecha_actual = DateTime.Now;
+
+}
+<div class="">
+
+    <input id="btnLiberar" type="submit" value='Liberar liquidaciones de @ViewBag.fechaUltimaLiberacion.AddMonths(1).ToString("MMMM")' onclick="javascript:confirmLiberacionLiquidacion(null,'@Url.Action("LiberarLiquidacion", new { id = 0 })')" />
+<hr />
+        <div class="box">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Usuario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>@Html.DropDownList("empresa", (SelectList)ViewBag.Clientes, "Seleccione...", new { @class = "form-control", @onchange = "CargarUsuarios()" })</td>
+                        <td>@Html.DropDownList("empleado", new SelectList(string.Empty, "Value", "Text"), "Seleccione...", new { @class = "form-control" })</td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">Liquidaciones a la Fecha</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body table-responsive no-padding">
+                <table class="table table-hover">
+                    <tbody id="tbody_table">
+                        <tr>
+                            <th></th>
+                            <th>Mes</th>
+                            <th>Año</th>
+                            <th>Dias trabajados</th>
+                        </tr>
+                        @{
+                            for (int i = 0; i < 24; i++)
+                            {
+
+                                <tr>
+                                    <td><a href="@Url.Action("Liquidacion", "Liquidaciones", new { Area = "Liquidaciones", fecha = fecha_actual.AddMonths(-i).ToString("yyyy-MM-dd") })" class="btn btn-default modal-ajax-load pdf-size" data-toggle="modal" data-target="#myModal" data-remote="false"><i class="fa fa fa-file-pdf-o"></i></a></td>
+                                    <td>@fecha_actual.AddMonths(-i).ToString("MMMM")</td>
+                                    <td>@fecha_actual.AddMonths(-i).ToString("yyyy")</td>
+                                    <td>30</td>
+                                </tr>
+                            }
+
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+
+<script>
+     $(document).ready(function () {
+        //Dropdownlist Selectedchange event
+         $("#empresa").change(function () {
+             $("#empleado").empty();
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("GetUsuarios")', // we are calling json method
+
+                dataType: 'json',
+
+                data: { id: $("#empresa").val() },
+         
+
+                success: function (states) {
+                    $("#empleado").append("<option>Seleccione...</option>")
+                    $.each(states, function (i, state) {
+                        $("#empleado").append('<option value="' + state.Value + '">' +
+                         state.Text + '</option>');
+                    // here we are adding option for States
+
+                    });
+                },
+                error: function (ex) {
+                    alert('Failed to retrieve states.' + ex);
+                }
+            });
+            return false;
+        })
+    });
+</script>

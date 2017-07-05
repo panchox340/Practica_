@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PAYROLL_PreProdModelStoreContainer" CdmEntityContainer="Db_Entities">
+    <FunctionImportMapping FunctionImportName="pa_selDatosLiquidacion" FunctionName="PAYROLL_PreProdModel.Store.pa_selDatosLiquidacion" />
+    <EntitySetMapping Name="Causal">
+      <EntityTypeMapping TypeName="PAYROLL_PreProdModel.Causal">
+        <MappingFragment StoreEntitySet="Causal">
+          <ScalarProperty Name="id_ing" ColumnName="id_ing" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="nom_causa" ColumnName="nom_causa" />
+          <ScalarProperty Name="id_causa" ColumnName="id_causa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cliente">
+      <EntityTypeMapping TypeName="PAYROLL_PreProdModel.Cliente">
+        <MappingFragment StoreEntitySet="Cliente">
+          <ScalarProperty Name="Nom_cor_emp" ColumnName="Nom_cor_emp" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="RUT" ColumnName="RUT" />
+          <ScalarProperty Name="giro" ColumnName="giro" />
+          <ScalarProperty Name="nom_emp" ColumnName="nom_emp" />
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comentario">
+      <EntityTypeMapping TypeName="PAYROLL_PreProdModel.Comentario">
+        <MappingFragment StoreEntitySet="Comentario">
+          <ScalarProperty Name="id_doc" ColumnName="id_doc" />
+          <ScalarProperty Name="id_usu" ColumnName="id_usu" />
+          <ScalarProperty Name="contenido" ColumnName="contenido" />
+          <ScalarProperty Name="titulo" ColumnName="titulo" />
+          <ScalarProperty Name="id_com" ColumnName="id_com" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Documento">
+      <EntityTypeMapping TypeName="PAYROLL_PreProdModel.Documento">
+        <MappingFragment StoreEntitySet="Documento">
+          <ScalarProperty Name="id_rem" ColumnName="id_rem" />
+          <ScalarProperty Name="id_ing" ColumnName="id_ing" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="id_doc" ColumnName="id_doc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ingresos">
+      <EntityTypeMapping TypeName="PAYROLL_PreProdModel.Ingresos">
+        <MappingFragment StoreEntitySet="Ingresos">
+          <ScalarProperty Name="id_causa" ColumnName="id_causa" />
+          <ScalarProperty Name="id_usu" ColumnName="id_usu" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="estado_civil" ColumnName="estado_civil" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="fecha_nacimiento" ColumnName="fecha_nacimiento" />
+          <ScalarProperty Name="nacionalidad" ColumnName="nacionalidad" />
+          <ScalarProperty Name="rut" ColumnName="rut" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="nombres" ColumnName="nombres" />
+          <ScalarProperty Name="id_ing" ColumnName="id_ing" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="parametros">
+      <EntityTypeMapping TypeName="PAYROLL_PreProdModel.parametros">
+        <MappingFragment StoreEntitySet="parametros">
+          <ScalarProperty Name="orden" ColumnName="orden" />
+          <ScalarProperty Name="texto" ColumnName="texto" />
+          <ScalarProperty Name="valor" ColumnName="valor" />
+          <ScalarProperty Name="detalle" ColumnName="detalle" />
+          <ScalarProperty Name="grupo" ColumnName="grupo" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Remuneracion">
+      <EntityTypeMapping TypeName="PAYROLL_PreProdModel.Remuneracion">
+        <MappingFragment StoreEntitySet="Remuneracion">
+          <ScalarProperty Name="id_usu" ColumnName="id_usu" />
+          <ScalarProperty Name="asignacion" ColumnName="asignacion" />
+          <ScalarProperty Name="anticipo" ColumnName="anticipo" />
+          <ScalarProperty Name="isapre" ColumnName="isapre" />
+          <ScalarProperty Name="apv" ColumnName="apv" />
+          <ScalarProperty Name="seg_com" ColumnName="seg_com" />
+          <ScalarProperty Name="otros_haberes" ColumnName="otros_haberes" />
+          <ScalarProperty Name="gratificacion" ColumnName="gratificacion" />
+          <ScalarProperty Name="sueldo_base" ColumnName="sueldo_base" />
+          <ScalarProperty Name="id_rem" ColumnName="id_rem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="PAYROLL_PreProdModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tipo_usu">
+      <EntityTypeMapping TypeName="PAYROLL_PreProdModel.tipo_usu">
+        <MappingFragment StoreEntitySet="tipo_usu">
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="id_tipo_usu" ColumnName="id_tipo_usu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="PAYROLL_PreProdModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="fechaIngreso" ColumnName="fechaIngreso" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="id_tipo_usu" ColumnName="id_tipo_usu" />
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="pass_usu" ColumnName="pass_usu" />
+          <ScalarProperty Name="Nom_usu" ColumnName="Nom_usu" />
+          <ScalarProperty Name="id_usu" ColumnName="id_usu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConfigPDF">
+      <EntityTypeMapping TypeName="PAYROLL_PreProdModel.ConfigPDF">
+        <MappingFragment StoreEntitySet="ConfigPDF">
+          <ScalarProperty Name="label" ColumnName="label" />
+          <ScalarProperty Name="orden" ColumnName="orden" />
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="campo" ColumnName="campo" />
+          <ScalarProperty Name="tag" ColumnName="tag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Permisos">
+      <EntityTypeMapping TypeName="PAYROLL_PreProdModel.Permisos">
+        <MappingFragment StoreEntitySet="Permisos">
+          <ScalarProperty Name="id_parametro" ColumnName="id_parametro" />
+          <ScalarProperty Name="id_usu" ColumnName="id_usu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Relacion_Usuarios">
+      <EntityTypeMapping TypeName="PAYROLL_PreProdModel.Relacion_Usuarios">
+        <MappingFragment StoreEntitySet="Relacion_Usuarios">
+          <ScalarProperty Name="subordinado" ColumnName="subordinado" />
+          <ScalarProperty Name="superior" ColumnName="superior" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario_Cliente">
+      <EntityTypeMapping TypeName="PAYROLL_PreProdModel.Usuario_Cliente">
+        <MappingFragment StoreEntitySet="Usuario_Cliente">
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="id_usu" ColumnName="id_usu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="fn_subordinadosPorUsuario" FunctionName="PAYROLL_PreProdModel.Store.fn_subordinadosPorUsuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PAYROLL_PreProdModel.fn_subordinadosPorUsuario_Result">
+          <ScalarProperty Name="NIVEL" ColumnName="NIVEL" />
+          <ScalarProperty Name="id_usu" ColumnName="id_usu" />
+          <ScalarProperty Name="Nom_usu" ColumnName="Nom_usu" />
+          <ScalarProperty Name="pass_usu" ColumnName="pass_usu" />
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="id_tipo_usu" ColumnName="id_tipo_usu" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="fechaIngreso" ColumnName="fechaIngreso" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="pa_selDatosCertAntiguedad" FunctionName="PAYROLL_PreProdModel.Store.pa_selDatosCertAntiguedad" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="PAYROLL_PreProdModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="PAYROLL_PreProdModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="PAYROLL_PreProdModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="PAYROLL_PreProdModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PAYROLL_PreProdModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="PAYROLL_PreProdModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PAYROLL_PreProdModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="PAYROLL_PreProdModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_selPeriodoUsuario" FunctionName="PAYROLL_PreProdModel.Store.sp_selPeriodoUsuario" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="PAYROLL_PreProdModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

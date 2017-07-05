@@ -1,0 +1,81 @@
+﻿
+@model WebApplicationModel.Avisos
+<form  id="form-FechasCalendario" method="post" action="@Url.Action("Create","MantFechasCalendario", new {Area = "Mantencion" })">
+    @Html.AntiForgeryToken()
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+    </div>
+    <div class="modal-body">
+        <div id="div1" class="tab-content formcolor">
+
+
+            <div class="form-group">
+                <label>Titulo evento</label>
+                <br />
+                @{
+                    @Html.TextBoxFor( Model=>Model.titulo_aviso,new { @maxlength = 20 });
+                }
+            </div>
+
+            <div class="form-group">
+                <label>Descripción evento</label>
+                <br />
+                @{
+                    @Html.TextAreaFor(model=>model.desc_aviso, new { @maxlength = 50 });
+                }
+            </div>
+       
+
+            <div class="form-group">
+                <label class="">Fecha evento</label>
+                <br />
+               
+                @Html.TextBoxFor(Model => Model.fecha_aviso, new { type = "date" })
+                @Html.TextBoxFor(Model => Model.id_avisos, new { type = "hidden" })
+                
+            </div>
+            <div class="form-group">
+                <label class="">Cliente a avisar</label>
+                <br />
+                <select class="js-example-basic-single" style="width:200px" id="id_cliente" name="id_cliente">
+                   @foreach (WebApplicationModel.Cliente item in ViewBag.clientes)
+                   {
+                       <option value="@item.id_cliente" >@item.Nom_cor_emp</option>
+                   }
+                </select>
+            </div>
+          
+
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" action="save" class="btn btn-primary">Save changes</button>
+     @if (Model != null)
+     {
+        <button onclick="javascript:confirmDelete(null,'@Url.Action("Delete", new { id = Model.id_avisos})')" msg-confirmacion="¿Desea Eliminar el Registro?" type="button"><i class="fa fa-trash-o"></i></button>
+     }
+    </div>
+</form>
+
+<script>
+    $(document).ready(function () {
+        $(".js-example-basic-single").select2({ dropdownParent: $("#myModal") });
+    });
+
+    setFormulario(
+       "form-FechasCalendario",
+    {
+        titulo_aviso: { required: true },
+        desc_aviso: { required: true },
+        fecha_aviso: { required: true },
+        id_cliente: { required: true }
+    },
+    {
+        titulo_aviso: { required: '<span class="help-block error" ><i class="fa fa-warning"></i> Ingrese titulo</span> ' },
+        desc_aviso: { required: '<span class="help-block error" ><i class="fa fa-warning"></i> Ingrese descripción </span> ' },
+        fecha_aviso: { required: '<span class="help-block error" ><i class="fa fa-warning"></i> Ingrese fecha</span> ' },
+        id_cliente: { required: '<span class="help-block error" ><i class="fa fa-warning"></i> Ingrese fecha</span> ' }
+    });
+</script>

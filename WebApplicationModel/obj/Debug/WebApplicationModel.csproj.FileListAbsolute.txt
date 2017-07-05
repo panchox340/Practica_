@@ -1,0 +1,30 @@
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplicationModel\bin\Debug\WebApplicationModel.dll.config
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplicationModel\bin\Debug\WebApplicationModel.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplicationModel\bin\Debug\WebApplicationModel.pdb
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplicationModel\bin\Debug\EntityFramework.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplicationModel\bin\Debug\EntityFramework.SqlServer.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplicationModel\bin\Debug\EntityFramework.xml
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplicationModel\bin\Debug\EntityFramework.SqlServer.xml
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplicationModel\obj\Debug\WebApplicationModel.csprojResolveAssemblyReference.cache
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplicationModel\obj\Debug\WebApplicationModel.dll
+\\psurfs\datauser$\dbarrera\Escritorio\C#\WebApplicationModel\obj\Debug\WebApplicationModel.pdb
+C:\Repos\C#\WebApplicationModel\bin\Debug\WebApplicationModel.dll.config
+C:\Repos\C#\WebApplicationModel\bin\Debug\WebApplicationModel.dll
+C:\Repos\C#\WebApplicationModel\bin\Debug\WebApplicationModel.pdb
+C:\Repos\C#\WebApplicationModel\bin\Debug\EntityFramework.dll
+C:\Repos\C#\WebApplicationModel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Repos\C#\WebApplicationModel\bin\Debug\EntityFramework.xml
+C:\Repos\C#\WebApplicationModel\bin\Debug\EntityFramework.SqlServer.xml
+C:\Repos\C#\WebApplicationModel\obj\Debug\WebApplicationModel.dll
+C:\Repos\C#\WebApplicationModel\obj\Debug\WebApplicationModel.pdb
+C:\Repos\C#\WebApplicationModel\obj\Debug\WebApplicationModel.csprojResolveAssemblyReference.cache
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplicationModel\bin\Debug\WebApplicationModel.dll.config
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplicationModel\bin\Debug\WebApplicationModel.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplicationModel\bin\Debug\WebApplicationModel.pdb
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplicationModel\bin\Debug\EntityFramework.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplicationModel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplicationModel\bin\Debug\EntityFramework.xml
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplicationModel\bin\Debug\EntityFramework.SqlServer.xml
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplicationModel\obj\Debug\WebApplicationModel.csprojResolveAssemblyReference.cache
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplicationModel\obj\Debug\WebApplicationModel.dll
+C:\Repos\Solucion-PayRoll AdminLTE\WebApplicationModel\obj\Debug\WebApplicationModel.pdb

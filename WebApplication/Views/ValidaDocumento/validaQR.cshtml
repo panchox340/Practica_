@@ -1,0 +1,45 @@
+﻿@using WebApplication.App_GlobalResources
+@{
+    Layout = null;
+    ViewBag.Title = "Valido";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>WebApplication</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    @Styles.Render("~/Styles/normalize.min.css")
+    @Styles.Render("~/Styles/style.css")
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="hold-transition login-page">
+    <div class="login">
+        <h1><img src="~/img/LOGOPAYROLL.png"></h1>
+        <h1>Documento valido</h1>
+        <h2>El Documento consultado se corresponde al original</h2>
+    </div>
+    <div id="div1">
+        <object data="@Url.Action("getFileData", "Master", (RouteValueDictionary)ViewBag.Routes_values)" type="application/pdf" style="width:100%; height:750px;"></object>
+        <p>
+            @Pay_Lenguaje.descarga_archivo_1 <a href="@Url.Action("getFileData", "Master", (RouteValueDictionary)ViewBag.Routes_values)">
+                @Pay_Lenguaje.descarga_archivo_2
+            </a>
+        </p>
+    </div>
+    @Scripts.Render("~/AdminLTE/plugins/jquery/js")
+    @Scripts.Render("~/AdminLTE/bootstrap/js")
+    @Scripts.Render("~/AdminLTE/plugins/icheck/js")
+    @Scripts.Render("~/AdminLTE/plugins/jquery-validate/js")
+    @Scripts.Render("~/Scripts/Account/Login")
+</body>
+</html>
