@@ -5,7 +5,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Security;
 using WebApplication.Controllers;
-using WebApplicationModel;
 
 namespace WebApplication.Seguridad
 {

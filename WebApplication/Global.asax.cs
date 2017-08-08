@@ -12,7 +12,6 @@ using System.Web.Routing;
 using System.Web.Security;
 using WebApplication.Controllers;
 using WebApplication.Seguridad;
-using WebApplicationModel;
 
 namespace WebApplication
 {

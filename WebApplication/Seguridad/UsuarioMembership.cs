@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Security;
-using WebApplicationModel;
 
 namespace WebApplication.Seguridad
 {
@@ -19,15 +18,15 @@ namespace WebApplication.Seguridad
         public System.DateTime fechaIngreso { get; set; }
 
 
-        public UsuarioMembership(Usuario us)
-        {
-            id_usu = us.id_usu;
-            Nom_usu = us.Nom_usu;
-            pass_usu = us.pass_usu;
-            id_cliente = us.id_cliente;
-            id_tipo_usu = us.id_tipo_usu;
-            email = us.email;
-            fechaIngreso = us.fechaIngreso;
-        }
+        //public UsuarioMembership(Usuario us)
+        //{
+        //    id_usu = us.id_usu;
+        //    Nom_usu = us.Nom_usu;
+        //    pass_usu = us.pass_usu;
+        //    id_cliente = us.id_cliente;
+        //    id_tipo_usu = us.id_tipo_usu;
+        //    email = us.email;
+        //    fechaIngreso = us.fechaIngreso;
+        //}
     }
 }

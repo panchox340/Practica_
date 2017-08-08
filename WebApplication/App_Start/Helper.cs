@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Text.RegularExpressions;
-using WebApplicationModel;
 using System.IO;
 using System.Xml;
 using System.Web.Mvc;
@@ -192,27 +191,27 @@ namespace WebApplication.App_Start
             return false;
         }
 
-        public string Get_TextCertificado(string tag, List<Dictionary<string, object>> datosCertAntiguedad, Usuario usuario)
-        {
-            int id_cliente = usuario.id_cliente;
-            XmlTextReader reader = new XmlTextReader(System.Web.Hosting.HostingEnvironment.MapPath(_db.Documento.FirstOrDefault(p => p.categoria == "DOCUMTXTCERTANT" && p.estado == 1 && p.id_cliente == id_cliente).ruta));
-            string Texto_Super = null;
-            while (reader.Read())
-            {
-                if (reader.Name == tag)
-                {
-                    Texto_Super = reader.ReadString();
-                }
+        //public string Get_TextCertificado(string tag, List<Dictionary<string, object>> datosCertAntiguedad, Usuario usuario)
+        //{
+        //    int id_cliente = usuario.id_cliente;
+        //    XmlTextReader reader = new XmlTextReader(System.Web.Hosting.HostingEnvironment.MapPath(_db.Documento.FirstOrDefault(p => p.categoria == "DOCUMTXTCERTANT" && p.estado == 1 && p.id_cliente == id_cliente).ruta));
+        //    string Texto_Super = null;
+        //    while (reader.Read())
+        //    {
+        //        if (reader.Name == tag)
+        //        {
+        //            Texto_Super = reader.ReadString();
+        //        }
 
-            }
-            foreach (var row in datosCertAntiguedad)
-            {
-                foreach (var item in row)
-                {
-                    Texto_Super = Texto_Super.Replace("{" + item.Key + "}", item.Value.ToString());
-                }
-            }
-            return Texto_Super;
-        }
+        //    }
+        //    foreach (var row in datosCertAntiguedad)
+        //    {
+        //        foreach (var item in row)
+        //        {
+        //            Texto_Super = Texto_Super.Replace("{" + item.Key + "}", item.Value.ToString());
+        //        }
+        //    }
+        //    return Texto_Super;
+        //}
     }
 }

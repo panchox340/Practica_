@@ -308,3 +308,9 @@ C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\obj\Debug\WebApplication.cspro
 C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\obj\Debug\es-CL\WebApplication.resources.dll
 C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\obj\Debug\WebApplication.dll
 C:\Repos\Solucion-PayRoll AdminLTE\WebApplication\obj\Debug\WebApplication.pdb
+C:\Repos\TreasuryWeb\WebApplication\obj\Debug\WebApplication.csprojResolveAssemblyReference.cache
+C:\Repos\TreasuryWeb\WebApplication\obj\Debug\WebApplication.App_GlobalResources.Pay.Lenguaje.resources
+C:\Repos\TreasuryWeb\WebApplication\obj\Debug\WebApplication.App_GlobalResources.Pay.Lenguaje.es-CL.resources
+C:\Repos\TreasuryWeb\WebApplication\obj\Debug\WebApplication.csproj.GenerateResource.Cache
+C:\Repos\TreasuryWeb\WebApplication\obj\Debug\WebApplication.dll
+C:\Repos\TreasuryWeb\WebApplication\obj\Debug\WebApplication.pdb

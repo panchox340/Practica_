@@ -155,26 +155,9 @@
     <Compile Include="App_Start\Helper.cs" />
     <Compile Include="App_Start\MasterController.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Areas\Certificados\CertificadosAreaRegistration.cs" />
-    <Compile Include="Areas\Certificados\Controllers\AntiguedadController.cs" />
-    <Compile Include="Areas\Liquidaciones\Controllers\LiquidacionesController.cs" />
-    <Compile Include="Areas\Liquidaciones\LiquidacionesAreaRegistration.cs" />
-    <Compile Include="Areas\Manage\Controllers\ManageController.cs" />
-    <Compile Include="Areas\Manage\ManageAreaRegistration.cs" />
-    <Compile Include="Areas\Mantencion\Controllers\MantFechasCalendarioController.cs" />
-    <Compile Include="Areas\Mantencion\Controllers\MantParametrosController.cs" />
-    <Compile Include="Areas\Mantencion\MantencionAreaRegistration.cs" />
-    <Compile Include="Areas\Remuneraciones\Controllers\LibroRemuController.cs" />
-    <Compile Include="Areas\Remuneraciones\RemuneracionesAreaRegistration.cs" />
-    <Compile Include="Areas\Solicitudes\Controllers\AltasController.cs" />
-    <Compile Include="Areas\Solicitudes\Controllers\BajasController.cs" />
-    <Compile Include="Areas\Solicitudes\Controllers\SolGenericaController.cs" />
-    <Compile Include="Areas\Solicitudes\Controllers\VacacionesController.cs" />
-    <Compile Include="Areas\Solicitudes\SolicitudesAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ValidaDocumentoController.cs" />
     <Compile Include="Extensions\ClaimsExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1137,8 +1120,6 @@
     <Content Include="Scripts\Home\DashboardV1.js" />
     <Content Include="Scripts\Home\DashboardV2-menu.js" />
     <Content Include="Scripts\Home\DashboardV2.js" />
-    <Content Include="Areas\Solicitudes\Views\SolGenerica\Index.cshtml" />
-    <Content Include="Areas\Solicitudes\Views\SolGenerica\OtraSolicitud.cshtml" />
     <Content Include="Scripts\jQuery-Mask\jquery.mask.js" />
     <Content Include="Scripts\jQuery-Mask\jquery.mask.min.js" />
     <Content Include="Scripts\Mailbox\Compose-menu.js" />
@@ -1183,11 +1164,6 @@
     <Content Include="Views\Shared\partials\_Notificaciones.cshtml" />
     <Content Include="Views\Error\Error.cshtml" />
     <Content Include="Views\Error\Error_404.cshtml" />
-    <Content Include="Areas\Mantencion\Views\MantFechasCalendario\Index.cshtml" />
-    <Content Include="Areas\Mantencion\Views\MantFechasCalendario\MantAvisos.cshtml" />
-    <Content Include="Areas\Mantencion\Views\MantParametros\.emptydir" />
-    <Content Include="Areas\Mantencion\Views\Shared\.emptydir" />
-    <Content Include="Areas\Liquidaciones\Views\Liquidaciones\LiberaLiquidacion.cshtml" />
     <Content Include="Files\PSO\DOCUMCERTANT\DOCUMCERTANT_20170531170036343_JVIDsdhsv.pdf" />
     <Content Include="Files\PSO\DOCUMLIQUI\DOCUMLIQUI_20170530174631753_JVIDsdhsv.pdf" />
     <Content Include="Files\BIOSOL\2017\05\REMUNERACION_20170523123309548_hvZLm.pdf" />
@@ -1210,15 +1186,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Certificados\Models\" />
-    <Folder Include="Areas\Certificados\Views\Shared\" />
-    <Folder Include="Areas\Liquidaciones\Models\" />
-    <Folder Include="Areas\Liquidaciones\Views\Shared\" />
-    <Folder Include="Areas\Mantencion\Models\" />
-    <Folder Include="Areas\Remuneraciones\Models\" />
-    <Folder Include="Areas\Remuneraciones\Views\Shared\" />
-    <Folder Include="Areas\Solicitudes\Models\" />
-    <Folder Include="Areas\Solicitudes\Views\Shared\" />
     <Folder Include="Files\PSO\2017\06\" />
     <Folder Include="Files\PSO\PSO\" />
     <Folder Include="Models\" />
@@ -1239,31 +1206,11 @@
     <Content Include="AdminLTE\plugins\ionicons\fonts\ionicons.eot" />
     <Content Include="AdminLTE\plugins\ionicons\fonts\ionicons.ttf" />
     <Content Include="AdminLTE\plugins\ionicons\fonts\ionicons.woff" />
-    <Content Include="Areas\Liquidaciones\Views\web.config" />
     <Content Include="Files\LIQUIDACION_QPX.pdf" />
-    <Content Include="Areas\Liquidaciones\Views\Liquidaciones\Index.cshtml" />
-    <Content Include="Areas\Liquidaciones\Views\Liquidaciones\Form.cshtml" />
-    <Content Include="Areas\Certificados\Views\web.config" />
-    <Content Include="Areas\Certificados\Views\Antiguedad\Index.cshtml" />
     <Content Include="Files\Antiguedad_Formato.pdf" />
-    <Content Include="Areas\Manage\Views\web.config" />
-    <Content Include="Areas\Manage\Views\Manage\Index.cshtml" />
-    <Content Include="Areas\Manage\Views\Manage\ChangePassword.cshtml" />
-    <Content Include="Areas\Remuneraciones\Views\web.config" />
-    <Content Include="Areas\Solicitudes\Views\web.config" />
-    <Content Include="Areas\Mantencion\Views\web.config" />
-    <Content Include="Areas\Solicitudes\Views\Altas\Index.cshtml" />
-    <Content Include="Areas\Solicitudes\Views\Altas\form.cshtml" />
-    <Content Include="Areas\Solicitudes\Views\Bajas\Index.cshtml" />
-    <Content Include="Areas\Solicitudes\Views\Bajas\Form.cshtml" />
-    <Content Include="Areas\Solicitudes\Views\Vacaciones\Index.cshtml" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Areas\Solicitudes\Views\Vacaciones\form.cshtml" />
-    <Content Include="Areas\Remuneraciones\Views\LibroRemu\.emptydir" />
-    <Content Include="Areas\Remuneraciones\Views\LibroRemu\Index.cshtml" />
-    <Content Include="Areas\Remuneraciones\Views\LibroRemu\Form.cshtml" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
@@ -1271,12 +1218,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\WebApplicationModel\WebApplicationModel.csproj">
-      <Project>{d1c44c7b-18cd-4339-9244-2b2123fb0681}</Project>
-      <Name>WebApplicationModel</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App_GlobalResources\Pay.Lenguaje.es-CL.resx">
@@ -1289,6 +1230,12 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Pay.Lenguaje.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebApplicationMod\WebApplicationMod.csproj">
+      <Project>{34b51e67-f94e-4713-816f-a514f8096833}</Project>
+      <Name>WebApplicationMod</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

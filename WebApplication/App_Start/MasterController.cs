@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using WebApplicationModel;
 using System.Web.Mvc;
 using Circon.Mvc.Helpers;
 using WebApplication.Seguridad;
@@ -28,35 +27,35 @@ namespace WebApplication
         protected const string TIPO_LIQUIDACION = "liquidacion";
         protected const string TIPO_CERTIFICADO_ANTIGUEDAD = "cert_ant";
         protected const string TIPO_OTROS = "other";
-        protected Db_Entities _db = new Db_Entities();
+        //protected Db_Entities _db = new Db_Entities();
 
-        protected Usuario SesionLogin()
-        {
-            if ((Session["usuario"] as Usuario) == null)
-            {
-                UsuarioMembership mu = (UsuarioMembership)Membership.GetUser(HttpContext.User.Identity.Name, false);
-                Session["usuario"] = _db.Usuario.SingleOrDefault(p => p.id_usu == mu.id_usu) as Usuario;
-            }
-            return Session["usuario"] as Usuario;
-        }
+        //protected Usuario SesionLogin()
+        //{
+        //    if ((Session["usuario"] as Usuario) == null)
+        //    {
+        //        UsuarioMembership mu = (UsuarioMembership)Membership.GetUser(HttpContext.User.Identity.Name, false);
+        //        Session["usuario"] = _db.Usuario.SingleOrDefault(p => p.id_usu == mu.id_usu) as Usuario;
+        //    }
+        //    return Session["usuario"] as Usuario;
+        //}
 
-        protected Cliente SesionCliente()
-        {
-            if ((Session["cliente"] as Cliente) == null)
-            {
-                var mu = HttpContext.Request.Cookies["AuthCookieClient"].Values["client_auth"].Trim();
-                Session["cliente"] = _db.Cliente.SingleOrDefault(p => p.Nom_cor_emp == mu) as Cliente;
-            }
-            return Session["cliente"] as Cliente;
-        }
-        protected Cliente SesionCliente(string cliente)
-        {
-            if ((Session["cliente"] as Cliente) == null)
-            {
-                Session["cliente"] = _db.Cliente.SingleOrDefault(p => p.Nom_cor_emp == cliente);
-            }
-            return (Session["cliente"] as Cliente) == null? new Cliente(): Session["cliente"] as Cliente;
-        }
+        //protected Cliente SesionCliente()
+        //{
+        //    if ((Session["cliente"] as Cliente) == null)
+        //    {
+        //        var mu = HttpContext.Request.Cookies["AuthCookieClient"].Values["client_auth"].Trim();
+        //        Session["cliente"] = _db.Cliente.SingleOrDefault(p => p.Nom_cor_emp == mu) as Cliente;
+        //    }
+        //    return Session["cliente"] as Cliente;
+        //}
+        //protected Cliente SesionCliente(string cliente)
+        //{
+        //    if ((Session["cliente"] as Cliente) == null)
+        //    {
+        //        Session["cliente"] = _db.Cliente.SingleOrDefault(p => p.Nom_cor_emp == cliente);
+        //    }
+        //    return (Session["cliente"] as Cliente) == null? new Cliente(): Session["cliente"] as Cliente;
+        //}
 
         protected ActionResult RedirectToLocal(string cliente, string returnUrl)
         {

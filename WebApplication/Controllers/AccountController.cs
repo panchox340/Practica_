@@ -7,7 +7,6 @@ using System.Web.Configuration;
 using System.Web.Mvc;
 using System.Web.Security;
 using WebApplication.Seguridad;
-using WebApplicationModel;
 
 namespace WebApplication.Controllers
 {
@@ -32,12 +31,12 @@ namespace WebApplication.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public ActionResult Login(string cliente, Usuario model, string returnUrl, string RememberMe) {
+        public ActionResult Login(string cliente, /*Usuario model,*/ string returnUrl, string RememberMe) {
 
-            if (Membership.ValidateUser(model.id_usu, model.pass_usu))
+            if (Membership.ValidateUser("",""/*model.id_usu, model.pass_usu)*/))
             {
-                SesionCliente(cliente);
-                FormsAuthentication.SetAuthCookie(model.id_usu, false);
+                //SesionCliente(cliente);
+                FormsAuthentication.SetAuthCookie(""/*model.id_usu*/, false);
 
                 var AuthCookie = Response.Cookies[FormsAuthentication.FormsCookieName];
 
@@ -47,7 +46,7 @@ namespace WebApplication.Controllers
                 Response.Cookies.Add(AuthCookieClient);
                 return RedirectToLocal(cliente,  returnUrl);
             }
-            return View(model);
+            return View(/*model*/);
         }
 
         [HttpPost]
@@ -55,7 +54,7 @@ namespace WebApplication.Controllers
         public ActionResult LogOff()
         {
 
-            string cliente = SesionCliente().Nom_cor_emp;
+            string cliente = "";//SesionCliente().Nom_cor_emp;
 
             FormsAuthentication.SignOut();
             Session.Abandon();
